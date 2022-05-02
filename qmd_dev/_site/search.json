@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Oligotrophic Comparison of Net-Based & In-situ Items",
+    "section": "",
+    "text": "This study analyzed abundance and biomass estimates collected through two\nHere, you can look at our main analyses as well as supplemental information and figures.\n\nMain Analyses:\n\nComparison of proportional representation by different sampling mechanisms\n\n\n\nSupplemental Analyses & Figures\n\nSupplemental Figure 1 - An example of a multiple-imaged individual\nSupplemental Figure 2 - Investigation into duplicate-imaged individuals\n\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "main_analysis_02.html",
+    "href": "main_analysis_02.html",
+    "title": "Comparison of Relative Abundance by two devices",
+    "section": "",
+    "text": "Here is a comparison of the relative abundance of different taxa"
+  },
+  {
+    "objectID": "main_analysis_01.html",
+    "href": "main_analysis_01.html",
+    "title": "Comparison of Size Distributions Sampled by two devices",
+    "section": "",
+    "text": "The MOCNESS and UVP inherently sample different size ranges. The MOCNESS was equipped with 153 micron mesh while the UVP only saves particles above 600 microns. To compare the effectiveness of the two devices, we analyzed MOCNESS images equal to or larger to what we are able to measure with the UVP. This comparison focuses only on taxa which made up a substantial portion of taxa sampled by both instruments. It is important to note that although UVP is set to save particle images above 600 microns, for comparable sized taxa, larger sizes are needed to accurately distinguish plankton from particles. The smallest recorded comparable organism was a 894 micron Shrimp-like crustacean. As such, this was the minimum size for inclusion for any MOCNESS-collected plankton in subsequent analyses.\nHere we compare All taxa, Annelids, Chaetognaths, Copepods, Shrimp-like Crustaceans, and Ostracod/Cladoceans.\n\n\n\n\n\nSize distributions for select taxa."
+  }
+]

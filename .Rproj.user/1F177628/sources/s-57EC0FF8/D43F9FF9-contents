@@ -1,0 +1,67 @@
+---
+title: Comparison of Size Distributions Sampled by two devices
+---
+
+```{r importing data, echo=FALSE, warning=FALSE}
+rm(list = ls())
+library(ggplot2)
+library(EcotaxaTools)
+library(DT)
+dat_list <- readRDS('../Output/code_01_size-range-dfs.rds')
+plot_list <- readRDS('../Output/main_fig_01_matched-size-distribution.rds')
+```
+
+The MOCNESS and UVP inherently sample different size ranges. The MOCNESS was equipped with 153 micron mesh while the UVP only saves particles above 600 microns. To compare the effectiveness of the two devices, we analyzed MOCNESS images equal to or larger to what we are able to measure with the UVP. This comparison focuses only on taxa which made up a [substantial](./main_analysis_02.html) portion of taxa sampled by both instruments. It is important to note that although UVP is set to save particle images above 600 microns, for comparable sized taxa, larger sizes are needed to accurately distinguish plankton from particles. The smallest recorded comparable organism was a 894 micron Shrimp-like crustacean. As such, this was the minimum size for inclusion for any MOCNESS-collected plankton in subsequent analyses.
+
+Here we compare All taxa, Annelids, Chaetognaths, Copepods, Shrimp-like Crustaceans, and Ostracod/Cladoceans.
+
+```{r Figure 1, echo=FALSE, fig.height=10, out.width='100%',fig.cap= 'Size distributions for select taxa.', dpi= 300}
+#| column: body-outset
+print(plot_list)
+```
+
+------------------------------------------------------------------------
+
+```{r Summary table, echo=FALSE}
+#| column: screen-inset
+
+comp_taxo <- c('Chaetognatha', 'Annelida', 'Copepoda', 'Shrimp-like',
+               'Ostra/Clado')
+# Format the data for the table
+summary_df <- function(df, sum_col, sum_by) {
+  rdf <- data.frame(taxa = sort(unique(df[[sum_by]])),
+                      min = rep(NA, length(unique(df[[sum_by]]))),
+                      median = rep(NA, length(unique(df[[sum_by]]))),
+                      mean = rep(NA, length(unique(df[[sum_by]]))),
+                      max = rep(NA, length(unique(df[[sum_by]]))))
+  
+  rdf$min <-  aggregate(df[[sum_col]], by = list(taxa = df[[sum_by]]),
+                      FUN = min)$x
+  rdf$median <- aggregate(df[[sum_col]], by = list(taxa = df[[sum_by]]),
+                      FUN = median)$x
+  rdf$mean <- aggregate(df[[sum_col]], by = list(taxa = df[[sum_by]]),
+                      FUN = mean)$x
+  rdf$max <- aggregate(df[[sum_col]], by = list(taxa = df[[sum_by]]),
+                      FUN = max)$x
+  
+  all_sum <- data.frame(taxa = 'All-Living')
+  all_sum$min <- min(df[[sum_col]])
+  all_sum$median <- median(df[[sum_col]])
+  all_sum$mean <- mean(df[[sum_col]])
+  all_sum$max <- max(df[[sum_col]])
+  
+  rdf <- rbind(all_sum, rdf)
+  return(rdf)
+}
+
+moc_dat <- summary_df(dat_list$moc_trim, 'calc_esd', 'taxo_name')
+
+uvp_dat <- summary_df(dat_list$uvp, 'calc_esd', 'name')
+
+datatable(moc_dat, class = 'hover', caption = 'Size summary statistics for MOCNESS-collected plankton above 0.894mm. Units are mm.')
+
+```
+```{r Second table, echo = FALSE}
+#| column: screen-inset
+datatable(uvp_dat, class = 'hover', caption = 'Size summary statistics for plankton imaged by the UVP')
+```
