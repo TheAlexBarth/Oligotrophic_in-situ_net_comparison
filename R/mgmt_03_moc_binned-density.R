@@ -132,6 +132,11 @@ for(i in 1:length(conc_list)) {
 conc_list <- lapply(conc_list, pivot_longer, cols = c('Annelida','Chaetognatha','Copepoda',
                                          'Ostra/Clado','Shrimp-like'),
        names_to = 'taxa', values_to = 'conc_m3')
+
+names(conc_list) <- c('jun_night',
+                      'jul_day_a',
+                      'jul_day_b',
+                      'jul_night')
 ####
 # Saving the Data---------------------------------------------------------------
 ####

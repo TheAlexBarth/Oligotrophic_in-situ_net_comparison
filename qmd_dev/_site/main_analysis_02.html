@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
   <meta charset="utf-8">
-  <meta name="generator" content="quarto-0.9.194">
+  <meta name="generator" content="quarto-0.9.80">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <title>Oligotrophic Mesozooplankton Methods Comparison - Comparison of Relative Abundance by two devices</title>
   <style>
@@ -11,6 +11,69 @@
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
 
   <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -20,19 +83,22 @@
   <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
   <script src="site_libs/quarto-search/fuse.min.js"></script>
   <script src="site_libs/quarto-search/quarto-search.js"></script>
+  <link href="./../Media/boat_favicon.png" rel="icon" type="image/png">
   <script src="site_libs/quarto-html/quarto.js"></script>
   <script src="site_libs/quarto-html/popper.min.js"></script>
   <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
   <script src="site_libs/quarto-html/anchor.min.js"></script>
   <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-  <link id="quarto-text-highlighting-styles" href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+  <link class="quarto-color-scheme" href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+  <link class="quarto-color-scheme quarto-color-alternate" rel="prefetch" href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css">
   <script src="site_libs/bootstrap/bootstrap.min.js"></script>
   <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-  <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link class="quarto-color-scheme" href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link class="quarto-color-scheme quarto-color-alternate" rel="prefetch" href="site_libs/bootstrap/bootstrap-dark.min.css">
   <script id="quarto-search-options" type="application/json">{
     "location": "navbar",
     "copy-button": false,
-    "collapse-after": 3,
+    "collapse-after": 2,
     "panel-placement": "end",
     "type": "overlay",
     "limit": 20,
@@ -48,6 +114,15 @@
       "search-submit-button-title": "Submit"
     }
   }</script>
+  <script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+  <link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+  <script src="site_libs/datatables-binding-0.22/datatables.js"></script>
+  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <link href="site_libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet">
+  <link href="site_libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet">
+  <script src="site_libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script>
+  <link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
+  <script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -73,12 +148,33 @@
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-main-analyses" role="button" data-bs-toggle="dropdown" aria-expanded="false">Main Analyses</a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-main-analyses">    
         <li>
+    <a class="dropdown-item" href="./main_analysis_01.html">
+ <span class="dropdown-text">Size Distributions</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./main_analysis_02.html">
  <span class="dropdown-text">Relative Abundance</span></a>
   </li>  
     </ul>
   </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-supplemental" role="button" data-bs-toggle="dropdown" aria-expanded="false">Supplemental</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-supplemental">    
+        <li>
+    <a class="dropdown-item" href="./supp_analysis_03.html">
+ <span class="dropdown-text">Full Size Range Comparison</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/TheAlexBarth/Oligotrophic_in-situ_net_comparison"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
 </ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
@@ -90,17 +186,260 @@
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 <header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title-block"><div><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+<div class="quarto-title"><h1 class="title">Comparison of Relative Abundance by two devices</h1></div></header>
+<p>Here is a comparison of the relative abundance of different taxa sampled by the two devices</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cowplot)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DT)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(EcotaxaTools)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>plot_list <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">'../Output/main_fig_02_rel-contribution.rds'</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>dat_list <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">'../Output/data_02_rel-contrib.rds'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell page-columns page-full">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_grid</span>(plot_list<span class="sc">$</span>moc_comp <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>,</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>                                                                <span class="at">hjust =</span> <span class="dv">1</span>),</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                                     <span class="at">legend.key.size =</span> <span class="fu">unit</span>(.<span class="dv">25</span>,<span class="st">'cm'</span>),</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>                                     <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">6</span>),</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>                                     <span class="at">legend.position =</span> <span class="st">'bottom'</span>,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>                                     <span class="at">plot.background =</span> <span class="fu">element_blank</span>()), </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>          plot_list<span class="sc">$</span>uvp<span class="sc">+</span> <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>                                                                <span class="at">hjust =</span> <span class="dv">1</span>),</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>                                     <span class="at">legend.key.size =</span> <span class="fu">unit</span>(.<span class="dv">25</span>,<span class="st">'cm'</span>),</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>                                     <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">6</span>),</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>                                     <span class="at">legend.position =</span> <span class="st">'bottom'</span>,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>                               <span class="at">plot.background =</span> <span class="fu">element_blank</span>()))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display column-body-outset">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="main_analysis_02_files/figure-html/Plot-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Relative contribution of different zooplankton groups to the total measured by MOCNESS (left) and UVP (right). For MOCNESS, June was night, July had three tows; two daytime (m14, m15) and one nighttime (m16)</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+<p>Pooling across all Tows/Casts we can get a general Sense of how the UVP and MOCNESS sample different taxonomic groups.</p>
+<div class="cell page-columns page-full">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">datatable</span>(dat_list<span class="sc">$</span>moc_filtered_all, <span class="at">rownames =</span> F, <span class="at">colnames =</span> <span class="fu">c</span>(<span class="st">'Taxa'</span>,<span class="st">'Percent Contribution'</span>),</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">caption =</span> <span class="st">'Relative Contribution of taxa collected by MOCNESS which were above 0.894mm.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display column-body-outset">
+<div id="htmlwidget-0d5a0f0d4ff022f60199" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0d5a0f0d4ff022f60199">{"x":{"filter":"none","vertical":false,"caption":"<caption>Relative Contribution of taxa collected by MOCNESS which were above 0.894mm.<\/caption>","data":[["Actinopterygii","Amphipoda","Annelida","Cephalochordata","Cephalopoda","Chaetognatha","Cirripedia","Copepoda","Gelatinous","Mollusca","Nauplii","Ostra/Clado","Other-living","Rhizaria","Shrimp-like"],[0.0336614010420974,0.0340749317674303,0.0299396245141014,0.00372177652799603,0.000992473740798941,0.287321147961294,0.0103382681333223,0.339426019353238,0.0991646679348276,0.0161276982879828,0.000165412290133157,0.0166239351583823,0.00297742122239682,0.000330824580266314,0.125134397485733]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Taxa<\/th>\n      <th>Percent Contribution<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":1}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div class="cell page-columns page-full">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">datatable</span>(dat_list<span class="sc">$</span>uvp_all, <span class="at">rownames =</span> F, <span class="at">colnames =</span> <span class="fu">c</span>(<span class="st">'Taxa'</span>,<span class="st">'Percent Contribution'</span>),</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">caption =</span> <span class="st">'Relative Contribution of taxa imaged by the UVP'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display column-body-outset">
+<div id="htmlwidget-307bb4bfcc06c0f3fcba" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-307bb4bfcc06c0f3fcba">{"x":{"filter":"none","vertical":false,"caption":"<caption>Relative Contribution of taxa imaged by the UVP<\/caption>","data":[["Actinopterygii","Amphipoda","Annelida","Chaetognatha","Copepoda","Gelatinous","Mollusca","Ostra/Clado","Other-living","Rhizaria","Shrimp-like","Trichodesmium"],[0.00250941028858218,0.000313676286072773,0.0116060225846926,0.0338770388958595,0.270075282308657,0.0125470514429109,0.00188205771643664,0.0219573400250941,0.0439146800501882,0.393977415307403,0.0319949811794228,0.17534504391468]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Taxa<\/th>\n      <th>Percent Contribution<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":1}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<hr>
+<p>Below are data which correspond to the figures shown above:</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">datatable</span>(dat_list<span class="sc">$</span>moc_filtered, <span class="at">rownames =</span> F, <span class="at">colnames =</span> <span class="fu">c</span>(<span class="st">'Taxa'</span>,<span class="st">'Percent Contribution'</span>,<span class="st">'Tow'</span>),</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">caption =</span> <span class="st">'Relative Contribution of taxa collected by MOCNESS which were above 0.894mm. Separated by cast'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="htmlwidget-10ab02c3e28eaae12b79" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-10ab02c3e28eaae12b79">{"x":{"filter":"none","vertical":false,"caption":"<caption>Relative Contribution of taxa collected by MOCNESS which were above 0.894mm. Separated by cast<\/caption>","data":[["Actinopterygii","Amphipoda","Annelida","Cephalochordata","Cephalopoda","Chaetognatha","Cirripedia","Copepoda","Gelatinous","Mollusca","Ostra/Clado","Other-living","Shrimp-like","Actinopterygii","Amphipoda","Annelida","Cephalochordata","Cephalopoda","Chaetognatha","Cirripedia","Copepoda","Gelatinous","Mollusca","Nauplii","Ostra/Clado","Other-living","Rhizaria","Shrimp-like","Actinopterygii","Amphipoda","Annelida","Cephalochordata","Cephalopoda","Chaetognatha","Cirripedia","Copepoda","Gelatinous","Mollusca","Nauplii","Ostra/Clado","Other-living","Rhizaria","Shrimp-like","Actinopterygii","Amphipoda","Annelida","Cephalochordata","Cephalopoda","Chaetognatha","Cirripedia","Copepoda","Gelatinous","Mollusca","Ostra/Clado","Other-living","Shrimp-like"],[0.0386204704386523,0.020184361093452,0.0247933884297521,0.00445009535918627,0.000794659885568977,0.320883661792753,0.00238397965670693,0.329942784488239,0.116973935155753,0.00778766687857597,0.00413223140495868,0.00174825174825175,0.12730451366815,0.0452698781195589,0.0441091120139292,0.0348229831688915,0.00174114915844457,0.00174114915844457,0.218804410911201,0.0220545560069646,0.312246082414393,0.0702263493905978,0.0342426001160766,0.000580383052814858,0.0226349390597795,0.00116076610562972,0.00174114915844457,0.188624492164829,0.021379980563654,0.0466472303206997,0.0344995140913508,0.00631681243926142,0.000485908649173955,0.300777453838678,0.0286686103012634,0.315354713313897,0.0879494655004859,0.0155490767735666,0.000485908649173955,0.0291545189504373,0.00340136054421769,0.000485908649173955,0.108843537414966,0.020812685827552,0.05599603567889,0.0371655104063429,0.000495540138751239,0.00148662041625372,0.227452923686819,0.0064420218037661,0.416749256689792,0.0797819623389494,0.0272547076313181,0.0376610505450942,0.00792864222001982,0.0807730426164519],["jun","jun","jun","jun","jun","jun","jun","jun","jun","jun","jun","jun","jun","jul_m14","jul_m14","jul_m14","jul_m14","jul_m14","jul_m14","jul_m14","jul_m14","jul_m14","jul_m14","jul_m14","jul_m14","jul_m14","jul_m14","jul_m14","jul_m15","jul_m15","jul_m15","jul_m15","jul_m15","jul_m15","jul_m15","jul_m15","jul_m15","jul_m15","jul_m15","jul_m15","jul_m15","jul_m15","jul_m15","jul_m16","jul_m16","jul_m16","jul_m16","jul_m16","jul_m16","jul_m16","jul_m16","jul_m16","jul_m16","jul_m16","jul_m16","jul_m16"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Taxa<\/th>\n      <th>Percent Contribution<\/th>\n      <th>Tow<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":1}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">datatable</span>(dat_list<span class="sc">$</span>uvp, <span class="at">rownames =</span> F, <span class="at">colnames =</span> <span class="fu">c</span>(<span class="st">'Taxa'</span>,<span class="st">'Percent Contribution'</span>,<span class="st">'Tow'</span>),</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">caption =</span> <span class="st">'Relative Contribution of taxa imaged by the UVP. Separated by month and time of day'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="htmlwidget-9c33d98156a29f9a54bc" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9c33d98156a29f9a54bc">{"x":{"filter":"none","vertical":false,"caption":"<caption>Relative Contribution of taxa imaged by the UVP. Separated by month and time of day<\/caption>","data":[["Annelida","Chaetognatha","Copepoda","Gelatinous","Mollusca","Ostra/Clado","Other-living","Rhizaria","Shrimp-like","Trichodesmium","Actinopterygii","Annelida","Chaetognatha","Copepoda","Gelatinous","Mollusca","Ostra/Clado","Other-living","Rhizaria","Shrimp-like","Trichodesmium","Actinopterygii","Annelida","Chaetognatha","Copepoda","Gelatinous","Mollusca","Ostra/Clado","Other-living","Rhizaria","Shrimp-like","Trichodesmium"],[0.0320855614973262,0.0481283422459893,0.414438502673797,0.0133689839572193,0.00267379679144385,0.0213903743315508,0.0267379679144385,0.387700534759358,0.0347593582887701,0.018716577540107,0.00443458980044346,0.00554323725055432,0.0310421286031042,0.239467849223947,0.00221729490022173,0.00110864745011086,0.0210643015521064,0.0232815964523282,0.3980044345898,0.0376940133037694,0.236141906873614,0.00110132158590308,0.00991189427312775,0.0275330396475771,0.244493392070485,0.00550660792951542,0.00220264317180617,0.026431718061674,0.0561674008810573,0.373348017621145,0.0330396475770925,0.220264317180617],["jun_night","jun_night","jun_night","jun_night","jun_night","jun_night","jun_night","jun_night","jun_night","jun_night","jul_day","jul_day","jul_day","jul_day","jul_day","jul_day","jul_day","jul_day","jul_day","jul_day","jul_day","jul_night","jul_night","jul_night","jul_night","jul_night","jul_night","jul_night","jul_night","jul_night","jul_night","jul_night"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Taxa<\/th>\n      <th>Percent Contribution<\/th>\n      <th>Tow<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":1}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
 
-<div class="quarto-title"><h1 class="title display-7">Comparison of Relative Abundance by two devices</h1></div></header>
-<p>Here is a comparison of the relative abundance of different taxa</p>
 
-
-
+<!-- -->
+<div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title anchored" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb7" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> Comparison of Relative Abundance by two devices</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>Here is a comparison of the relative abundance of different taxa sampled by the two devices</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="in">```{r Set-up, warning = F}</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cowplot)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DT)</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(EcotaxaTools)</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>plot_list <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">'../Output/main_fig_02_rel-contribution.rds'</span>)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>dat_list <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">'../Output/data_02_rel-contrib.rds'</span>)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="in">```{r Plot, warning = F, fig.height=5, fig.cap = 'Relative contribution of different zooplankton groups to the total measured by MOCNESS (left) and UVP (right). For MOCNESS, June was night, July had three tows; two daytime (m14, m15) and one nighttime (m16)', out.width="100%"}</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="co">#| column: body-outset</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_grid</span>(plot_list<span class="sc">$</span>moc_comp <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>,</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>                                                                <span class="at">hjust =</span> <span class="dv">1</span>),</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>                                     <span class="at">legend.key.size =</span> <span class="fu">unit</span>(.<span class="dv">25</span>,<span class="st">'cm'</span>),</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>                                     <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">6</span>),</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>                                     <span class="at">legend.position =</span> <span class="st">'bottom'</span>,</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>                                     <span class="at">plot.background =</span> <span class="fu">element_blank</span>()), </span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>          plot_list<span class="sc">$</span>uvp<span class="sc">+</span> <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>,</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>                                                                <span class="at">hjust =</span> <span class="dv">1</span>),</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>                                     <span class="at">legend.key.size =</span> <span class="fu">unit</span>(.<span class="dv">25</span>,<span class="st">'cm'</span>),</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>                                     <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">6</span>),</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>                                     <span class="at">legend.position =</span> <span class="st">'bottom'</span>,</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>                               <span class="at">plot.background =</span> <span class="fu">element_blank</span>()))</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>---------------------------------------------------------------------------</span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>Pooling across all Tows/Casts we can get a general Sense of how the UVP and MOCNESS sample different taxonomic groups.</span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a><span class="in">```{r Table-Moc-all}</span></span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a><span class="co">#| column: body-outset</span></span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a><span class="fu">datatable</span>(dat_list<span class="sc">$</span>moc_filtered_all, <span class="at">rownames =</span> F, <span class="at">colnames =</span> <span class="fu">c</span>(<span class="st">'Taxa'</span>,<span class="st">'Percent Contribution'</span>),</span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>          <span class="at">caption =</span> <span class="st">'Relative Contribution of taxa collected by MOCNESS which were above 0.894mm.'</span>)</span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a><span class="in">```{r Table-UVP-all}</span></span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a><span class="co">#| column: body-outset</span></span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a><span class="fu">datatable</span>(dat_list<span class="sc">$</span>uvp_all, <span class="at">rownames =</span> F, <span class="at">colnames =</span> <span class="fu">c</span>(<span class="st">'Taxa'</span>,<span class="st">'Percent Contribution'</span>),</span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>          <span class="at">caption =</span> <span class="st">'Relative Contribution of taxa imaged by the UVP'</span>)</span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>-----------------------------------------------------------</span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>Below are data which correspond to the figures shown above:</span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a><span class="in">```{r Table-Moc-by-cast}</span></span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a><span class="fu">datatable</span>(dat_list<span class="sc">$</span>moc_filtered, <span class="at">rownames =</span> F, <span class="at">colnames =</span> <span class="fu">c</span>(<span class="st">'Taxa'</span>,<span class="st">'Percent Contribution'</span>,<span class="st">'Tow'</span>),</span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a>          <span class="at">caption =</span> <span class="st">'Relative Contribution of taxa collected by MOCNESS which were above 0.894mm. Separated by cast'</span>)</span>
+<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a><span class="in">```{r table-uvp-by-cast}</span></span>
+<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a><span class="fu">datatable</span>(dat_list<span class="sc">$</span>uvp, <span class="at">rownames =</span> F, <span class="at">colnames =</span> <span class="fu">c</span>(<span class="st">'Taxa'</span>,<span class="st">'Percent Contribution'</span>,<span class="st">'Tow'</span>),</span>
+<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a>          <span class="at">caption =</span> <span class="st">'Relative Contribution of taxa imaged by the UVP. Separated by month and time of day'</span>)</span>
+<span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
 </main> <!-- /main -->
 <script type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+    } else {
+      disableStylesheet(alternateStylesheets);
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -126,6 +465,57 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
   function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,

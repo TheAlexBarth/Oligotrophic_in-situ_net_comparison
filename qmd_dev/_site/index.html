@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
   <meta charset="utf-8">
-  <meta name="generator" content="quarto-0.9.194">
+  <meta name="generator" content="quarto-0.9.80">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <title>Oligotrophic Mesozooplankton Methods Comparison - Oligotrophic Comparison of Net-Based &amp; In-situ Items</title>
   <style>
@@ -83,19 +83,22 @@
   <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
   <script src="site_libs/quarto-search/fuse.min.js"></script>
   <script src="site_libs/quarto-search/quarto-search.js"></script>
+  <link href="./../Media/boat_favicon.png" rel="icon" type="image/png">
   <script src="site_libs/quarto-html/quarto.js"></script>
   <script src="site_libs/quarto-html/popper.min.js"></script>
   <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
   <script src="site_libs/quarto-html/anchor.min.js"></script>
   <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-  <link id="quarto-text-highlighting-styles" href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+  <link class="quarto-color-scheme" href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+  <link class="quarto-color-scheme quarto-color-alternate" rel="prefetch" href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css">
   <script src="site_libs/bootstrap/bootstrap.min.js"></script>
   <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-  <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link class="quarto-color-scheme" href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link class="quarto-color-scheme quarto-color-alternate" rel="prefetch" href="site_libs/bootstrap/bootstrap-dark.min.css">
   <script id="quarto-search-options" type="application/json">{
     "location": "navbar",
     "copy-button": false,
-    "collapse-after": 3,
+    "collapse-after": 2,
     "panel-placement": "end",
     "type": "overlay",
     "limit": 20,
@@ -136,12 +139,41 @@
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-main-analyses" role="button" data-bs-toggle="dropdown" aria-expanded="false">Main Analyses</a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-main-analyses">    
         <li>
+    <a class="dropdown-item" href="./main_analysis_01.html">
+ <span class="dropdown-text">Size Distributions</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./main_analysis_02.html">
  <span class="dropdown-text">Relative Abundance</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./main_analysis_03.html">
+ <span class="dropdown-text">Select Density Profiles</span></a>
+  </li>  
     </ul>
   </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-supplemental" role="button" data-bs-toggle="dropdown" aria-expanded="false">Supplemental</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-supplemental">    
+        <li>
+    <a class="dropdown-item" href="./supp_analysis_03.html">
+ <span class="dropdown-text">Full Size Range Comparison</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./supp_analysis_04.html">
+ <span class="dropdown-text">All Density Profiles</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/TheAlexBarth/Oligotrophic_in-situ_net_comparison"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
 </ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
@@ -155,36 +187,155 @@
 <!-- main -->
 <main class="content" id="quarto-document-content">
 <header id="title-block-header" class="quarto-title-block default">
-
-<div class="quarto-title"><h1 class="title display-7">Oligotrophic Comparison of Net-Based &amp; In-situ Items</h1></div></header>
+<div class="quarto-title-block"><div><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title"><h1 class="title">Oligotrophic Comparison of Net-Based &amp; In-situ Items</h1></div></header>
 <p>Supplemental information for “Comparison of an in-situ imaging device and net-based method to study mesozooplankton communities in an oligotrophic system.”</p>
-<p>This study analyzed abundance and biomass estimates collected through two</p>
-<p>Here, you can look at our main analyses as well as supplemental information and figures.</p>
+<p>This study analyzed abundance and biomass estimates collected through two methods: A traditional depth-specific net system (MOCNESS) and a novel <em>in-situ</em> imaging tool, the UVP.</p>
+<p>Here, you can look at our main analyses as well as supplemental information and figures. Data are available on the <a href="https://github.com/TheAlexBarth/Oligotrophic_in-situ_net_comparison">project’s github repo</a> along with r scripts for processing the data. Much of the data analysis relies on Alex Barth’s <a href="https://github.com/TheAlexBarth/EcotaxaTools">EcotaxaTools Package</a> which is currently not yet available on CRAN. Additionally, all data on the repo are in .rds format to allow for storage of complex objects. If you would like data for this project in either csv or json format, send an email to Alex Barth (AB93@email.sc.edu).</p>
 <section id="main-analyses" class="level3">
 <h3 class="anchored" data-anchor-id="main-analyses">Main Analyses:</h3>
 <ul>
-<li><a href="./main_analysis_02.html">Comparison of proportional representation by different sampling mechanisms</a></li>
+<li><a href="./main_analysis_01.html">1: Size sampling distributions by different tools</a></li>
+<li><a href="./main_analysis_02.html">2: Comparison of proportional representation of taxa by different sampling mechanisms</a></li>
+<li><a href="./main_analysis_03.html">3: Density profiles of select taxa estimated by the two different tools</a></li>
 </ul>
 </section>
 <section id="supplemental-analyses-figures" class="level3">
 <h3 class="anchored" data-anchor-id="supplemental-analyses-figures">Supplemental Analyses &amp; Figures</h3>
 <ul>
-<li><p>Supplemental Figure 1 - An example of a multiple-imaged individual</p></li>
-<li><p>Supplemental Figure 2 - Investigation into duplicate-imaged individuals</p></li>
+<li>Supplemental Figure 1 - An example of a multiple-imaged individual</li>
+<li>Supplemental Figure 2 - Investigation into duplicate-imaged individuals</li>
+<li><a href="./supp_analysis_03.html">Supplemental Figure 3 - Full Size Range MOCNESS Compared to UVP</a></li>
+<li><a href="./supp_analysis_04.html">Supplemental Figure 4 - All Density Profiles</a></li>
 </ul>
-<div class="cell">
-<div class="sourceCode" id="cb1"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-stdout">
-<pre><code>[1] 2</code></pre>
-</div>
-</div>
 
 
-
+<!-- -->
+<div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title anchored" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Oligotrophic Comparison of Net-Based &amp; In-situ Items"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>Supplemental information for "Comparison of an in-situ imaging device and net-based method to study mesozooplankton communities in an oligotrophic system."</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>This study analyzed abundance and biomass estimates collected through two methods: A traditional depth-specific net system (MOCNESS) and a novel *in-situ* imaging tool, the UVP.</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Here, you can look at our main analyses as well as supplemental information and figures. Data are available on the <span class="co">[</span><span class="ot">project's github repo</span><span class="co">](https://github.com/TheAlexBarth/Oligotrophic_in-situ_net_comparison)</span> along with r scripts for processing the data. Much of the data analysis relies on Alex Barth's <span class="co">[</span><span class="ot">EcotaxaTools Package</span><span class="co">](https://github.com/TheAlexBarth/EcotaxaTools)</span> which is currently not yet available on CRAN. Additionally, all data on the repo are in .rds format to allow for storage of complex objects. If you would like data for this project in either csv or json format, send an email to Alex Barth (AB93@email.sc.edu).</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">### Main Analyses:</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">1: Size sampling distributions by different tools</span><span class="co">](./main_analysis_01.html)</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">2: Comparison of proportional representation of taxa by different sampling mechanisms</span><span class="co">](./main_analysis_02.html)</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">3: Density profiles of select taxa estimated by the two different tools</span><span class="co">](./main_analysis_03.html)</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">### Supplemental Analyses &amp; Figures</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Supplemental Figure 1 - An example of a multiple-imaged individual</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Supplemental Figure 2 - Investigation into duplicate-imaged individuals</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Supplemental Figure 3 - Full Size Range MOCNESS Compared to UVP</span><span class="co">](./supp_analysis_03.html)</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Supplemental Figure 4 - All Density Profiles</span><span class="co">](./supp_analysis_04.html)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
 </section>
 </main> <!-- /main -->
 <script type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+    } else {
+      disableStylesheet(alternateStylesheets);
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -210,6 +361,57 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
   function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,

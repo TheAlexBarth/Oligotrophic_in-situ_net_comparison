@@ -6,7 +6,9 @@
  
 # This management file produces two lists of UVP Concentrations for different taxa 
 # in discrete depth bins. One of these are 10m wide bins, the other has bins matched 
-# to the MOCNESS
+# to the MOCNESS which are used for regressions in analysis 04. 
+# There are two binning methods: One sums uvp casts, this increases the volume
+# While the other averages uvp casts.
 
 # |- Loading in the data ------------------------------------------------------
 rm(list = ls())
@@ -17,7 +19,7 @@ uvp_list <- list(
   ae1917 = readRDS('./Data/uvp_ae1917.rds')
 )
 ####
-# Binning ----------------------------------------------------------------------
+# Binning summed casts --------------------------------------------------------
 ####
 
 #trim uvp to just have the taxa of interest
@@ -29,7 +31,7 @@ uvp_list$ae1917 <-  mod_zoo(uvp_list$ae1917, names_keep, comp_names)
 
 # set up a name map:
 ae1912_map <- list(
-  day = uvp_list$ae1912$meta$profileid[which(uvp_list$ae1912$meta$timeOfDay == 'day')]
+  night = uvp_list$ae1912$meta$profileid[which(uvp_list$ae1912$meta$timeOfDay == 'night')]
 )
 
 ae1917_map <- list(
@@ -37,7 +39,12 @@ ae1917_map <- list(
   night = uvp_list$ae1917$meta$profileid[which(uvp_list$ae1917$meta$timeOfDay == 'night')]
 )
 
-#|- Independing Binning -------------------------------------------------------
+ae1912_map$night <- ae1912_map$night[which(ae1912_map$night %in% names(uvp_list$ae1912$zoo_files))]
+ae1917_map$day <- ae1917_map$day[which(ae1917_map$day %in% names(uvp_list$ae1917$zoo_files))]
+ae1917_map$night <- ae1917_map$night[which(ae1917_map$night %in% names(uvp_list$ae1917$zoo_files))]
+
+
+#|- Independent Binning -------------------------------------------------------
 
 # make a list for concentration storage
 indp_depth_breaks <- list(list(db = seq(0,1000,10),
@@ -49,10 +56,10 @@ indp_depth_breaks <- list(list(db = seq(0,1000,10),
                           list(db = seq(0,260,10),
                                ToD = 'night'))
 
-names(indp_depth_breaks) <- c('jun',
-                              'jul_m14',
-                              'jul_m15',
-                              'jul_m16')
+names(indp_depth_breaks) <- c('jun_night',
+                              'jul_day_a',
+                              'jul_day_b',
+                              'jul_night')
 
 
 indp_conc_list <- vector('list',4)
@@ -60,20 +67,16 @@ indp_conc_list <- vector('list',4)
 for(i in 1:length(indp_conc_list)) {
   if(i == 1) {
     indp_conc_list[[i]] <- merge_casts(uvp_list$ae1912, ae1912_map) |> 
-      uvp_conc('day', depth_breaks = indp_depth_breaks$jun$db)
+      uvp_conc('night', depth_breaks = indp_depth_breaks$jun_night$db) |> 
+      bin_format()
   } else if (i > 1) {
     indp_conc_list[[i]] <- merge_casts(uvp_list$ae1917, ae1917_map) |> 
       uvp_conc(cast_name = indp_depth_breaks[[i]]$ToD,
-               depth_breaks = indp_depth_breaks[[i]]$db)
+               depth_breaks = indp_depth_breaks[[i]]$db) |> 
+      bin_format()
   }
 }
 
-for(i in 1:length(indp_conc_list)){
-  info_cols <- get_bin_limtis(indp_conc_list[[i]]$db)
-  indp_conc_list[[i]]$min_d <- info_cols$min_d
-  indp_conc_list[[i]]$max_d <- info_cols$max_d
-  indp_conc_list[[i]]$mp <- info_cols$mp
-}
 names(indp_conc_list) <- names(indp_depth_breaks)
 
 # |- Matched binning ----------------------------------------------------------
@@ -88,10 +91,10 @@ matched_depth_breaks <- list(list(db = c(0,50,150,250,350,600,800,1000),
                           ToD = 'night'))
 
 
-names(matched_depth_breaks) <- c('jun',
-                              'jul_m14',
-                              'jul_m15',
-                              'jul_m16')
+names(matched_depth_breaks) <- c('jun_night',
+                                 'jul_day_a',
+                                 'jul_day_b',
+                                 'jul_night')
 
 
 matched_conc_list <- vector('list',4)
@@ -99,24 +102,79 @@ matched_conc_list <- vector('list',4)
 for(i in 1:length(matched_conc_list)) {
   if(i == 1) {
     matched_conc_list[[i]] <- merge_casts(uvp_list$ae1912, ae1912_map) |> 
-      uvp_conc('day', depth_breaks = matched_depth_breaks$jun$db)
+      uvp_conc('night', depth_breaks = matched_depth_breaks$jun_night$db) |> 
+      bin_format()
   } else if (i > 1) {
     matched_conc_list[[i]] <- merge_casts(uvp_list$ae1917, ae1917_map) |> 
       uvp_conc(cast_name = matched_depth_breaks[[i]]$ToD,
-               depth_breaks = matched_depth_breaks[[i]]$db)
+               depth_breaks = matched_depth_breaks[[i]]$db) |> 
+      bin_format()
   }
-}
-
-for(i in 1:length(matched_conc_list)){
-  info_cols <- get_bin_limtis(matched_conc_list[[i]]$db)
-  matched_conc_list[[i]]$min_d <- info_cols$min_d
-  matched_conc_list[[i]]$max_d <- info_cols$max_d
-  matched_conc_list[[i]]$mp <- info_cols$mp
 }
 names(matched_conc_list) <- names(matched_depth_breaks)
 
 ####
+# Averaging Binned Casts ---------------------------------------------------
+####
+
+# |- Matching Function ---------------------------------------------------
+cast_assign <- function(cast_name, ecopartobj, db) {
+  conc_output <- ecopartobj |> uvp_conc(cast_name, db)
+  return(conc_output)
+}
+avg_casts <- function(casts, ecopartobj, db) {
+  conc_list <- lapply(casts, cast_assign, ecopartobj, db)
+  conc_df <- do.call(rbind, conc_list)
+  mean_df <- aggregate(list(mean = conc_df$conc_m3), by = list(db = conc_df$db,
+                                      taxa = conc_df$taxa),
+                   FUN = mean) |> add_zeros('mean')
+  
+  sd_df <- aggregate(list(sd = conc_df$conc_m3), by = list(db = conc_df$db,
+                                                taxa = conc_df$taxa),
+                     FUN = sd, na.rm = T) |> add_zeros('sd')
+  sd_df$sd[is.na(sd_df$sd)] <- 0
+  return(structure(merge(mean_df, sd_df), class = c('data.frame', 'etx_conc_obj')))
+}
+
+# |- Create Avg Lists --------------------------------------------
+
+indp_avg_list <- list(jun_night = avg_casts(ae1912_map$night,
+                                          uvp_list$ae1912,
+                                          indp_depth_breaks$jun_night$db),
+                      jul_day_a = avg_casts(ae1917_map$day,
+                                            uvp_list$ae1917,
+                                            indp_depth_breaks$jul_day_a$db),
+                      jul_day_b = avg_casts(ae1917_map$day,
+                                            uvp_list$ae1917,
+                                            indp_depth_breaks$jul_day_b$db),
+                      jul_night = avg_casts(ae1917_map$night,
+                                            uvp_list$ae1917,
+                                            indp_depth_breaks$jul_night$db))
+indp_avg_list <- lapply(indp_avg_list, bin_format)
+
+matched_avg_list <- list(jun_night = avg_casts(ae1912_map$night,
+                                            uvp_list$ae1912,
+                                            matched_depth_breaks$jun_night$db),
+                      jul_day_a = avg_casts(ae1917_map$day,
+                                            uvp_list$ae1917,
+                                            matched_depth_breaks$jul_day_a$db),
+                      jul_day_b = avg_casts(ae1917_map$day,
+                                            uvp_list$ae1917,
+                                            matched_depth_breaks$jul_day_b$db),
+                      jul_night = avg_casts(ae1917_map$night,
+                                            uvp_list$ae1917,
+                                            matched_depth_breaks$jul_night$db))
+matched_avg_list <- lapply(matched_avg_list, bin_format)
+
+
+
+####
 # Save the Data ---------------------------------------------------------------
 ####
-saveRDS(matched_conc_list, './Data/uvp_all-binned-densities_matched.rds')
-saveRDS(indp_conc_list, './Data/uvp_all-binned-densities_indp.rds')
+saveRDS(list(pooled = matched_conc_list,
+             avged = matched_avg_list),
+        './Data/uvp_all-binned-densities_matched.rds')
+
+saveRDS(list(pooled = indp_conc_list,
+             avged = indp_avg_list),
+        './Data/uvp_all-binned-densities_indp.rds')

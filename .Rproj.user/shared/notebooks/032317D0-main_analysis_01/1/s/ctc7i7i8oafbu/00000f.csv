@@ -1,6 +1,0 @@
-"0","rm(list = ls())"
-"0","library(ggplot2)"
-"0","library(EcotaxaTools)"
-"0","library(DT)"
-"0","dat_list <- readRDS('../Output/code_01_size-range-dfs.rds')"
-"0","plot_list <- readRDS('../Output/main_fig_01_matched-size-distribution.rds')"

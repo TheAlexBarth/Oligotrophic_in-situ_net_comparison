@@ -3,6 +3,7 @@ project:
 
 website:
   title: "Oligotrophic Mesozooplankton Methods Comparison"
+  favicon: "../Media/boat_favicon.png"
   navbar:
     background: dark
     search: false
@@ -15,17 +16,25 @@ website:
           text: Size Distributions
         - href: main_analysis_02.qmd
           text: Relative Abundance
+        - href: main_analysis_03.qmd
+          text: Select Density Profiles
       - text: 'Supplemental'
-        menu: 
-          - href: supp_analysis_01.qmd
+        menu:
+          - href: supp_analysis_03.qmd
             text: Full Size Range Comparison
+          - href: supp_analysis_04.qmd
+            text: All Density Profiles
+      - href: https://github.com/TheAlexBarth/Oligotrophic_in-situ_net_comparison
+        icon: github
 
 format:
   html:
-    theme: 
+    theme:
       light: flatly
       dark: darkly
     css: styles.css
+    code-fold: true
+    code-tools: true
 
 editor: visual
 
