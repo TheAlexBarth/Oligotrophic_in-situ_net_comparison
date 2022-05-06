@@ -1,17 +1,17 @@
 ####
-# Management: Integrating over depth bins --------------------------------------
+# Management - Biomass integration
 ####
 rm(list = ls())
 library(EcotaxaTools)
 
 
 ## |- Load in data-------------------------------------------------------------
-moc_conc <- readRDS('./Data/moc_all-binned-densities.rds')
+moc_conc <- readRDS('./Data/moc_all-binned-biomass.rds')
 uvp_list <- list(
   ae1912 = readRDS('./Data/uvp_ae1912.rds'),
   ae1917 = readRDS('./Data/uvp_ae1917.rds')
 )
-pool_uvp <- readRDS('./Data/uvp_all-binned-densities_indp.rds')$pooled
+pool_uvp <- readRDS('./Data/uvp_all-binned-biomass_indp.rds')$pooled
 
 
 ####
@@ -19,7 +19,7 @@ pool_uvp <- readRDS('./Data/uvp_all-binned-densities_indp.rds')$pooled
 ####
 
 
-# |- Binning Raw UVP Data --------------------------------------------------------
+# |- Binning Raw UVP Data -----------------------------------------------------
 
 # |- Bin set-ups --------------------------------------------------------------
 
@@ -57,12 +57,39 @@ names(indp_depth_breaks) <- c('jun_night',
 indp_conc_list <- vector('list',4)
 names(indp_conc_list) <- names(indp_depth_breaks)
 
+# |- Dry mass conversion factors ----------------------------------------------
+biomass_conv <- function(taxa) {
+  switch(taxa,
+         'Copepoda' = return(.055),
+         'Chaetognatha' = return(.013),
+         'Ostra/Clado' = return(.052),
+         'Shrimp-like' = return(.027),
+         stop("Taxa Name Not Fit"))
+}
+
+bv_dm <- function(df) {
+  taxo_name <- get_col_name(df, 'taxo_name')
+  taxa <- df[[taxo_name]]
+  conv_fact <- sapply(df[[taxo_name]], biomass_conv)
+  return(df[['calc_esd']]*conv_fact)
+}
+
+# |- trim uvp taxa & add drymass ----------------------------------------------
+comp_names <- c('Copepoda','Chaetognatha','Ostra/Clado','Shrimp-like')
+uvp_list$ae1912 <-  mod_zoo(uvp_list$ae1912, names_keep, comp_names) |> 
+  add_zoo(func = bv_dm, 'dry_mass')
+uvp_list$ae1917 <-  mod_zoo(uvp_list$ae1917, names_keep, comp_names) |> 
+  add_zoo(func = bv_dm, 'dry_mass')
+
+
+# |- Binning Loop -------------------------------------------------------------
 cast_assign <- function(cast_name, ecopartobj, db) {
-  conc_output <- ecopartobj |> uvp_conc(cast_name, db)
+  conc_output <- ecopartobj |> uvp_conc(cast_name, db,
+                                        func_col = 'dry_mass',
+                                        func = sum)
   return(conc_output)
 }
 
-# |- Binning Loop -------------------------------------------------------------
 for(i in 1:length(indp_conc_list)) {
   #set up special for ae1912
   if(i == 1) {
@@ -119,16 +146,16 @@ pool_conc_list <- pool_uvp |> pool_split_june()
 # |- Integrating --------------------------------------------------------------
 
 avg_integrate <- function(list, ...) {
- temp_intg_list <- lapply(list, integrate_all, ...)
- df_list <- lapply(temp_intg_list, intg_to_tib)
- all_casts <- list_to_tib(df_list)
- rdf <- aggregate(list(mean_conc_m2 = all_casts$intg),
+  temp_intg_list <- lapply(list, integrate_all, ...)
+  df_list <- lapply(temp_intg_list, intg_to_tib)
+  all_casts <- list_to_tib(df_list)
+  rdf <- aggregate(list(mean_conc_m2 = all_casts$intg),
                    by = list(taxa = all_casts$taxa),
                    FUN = mean)
- rdf$sd_conc_m2 <- aggregate(all_casts$intg,
-                             by = list(all_casts$taxa),
-                             FUN = sd)$x
- return(rdf)
+  rdf$sd_conc_m2 <- aggregate(all_casts$intg,
+                              by = list(all_casts$taxa),
+                              FUN = sd)$x
+  return(rdf)
 }
 
 avg_intg <- lapply(avg_conc_list, avg_integrate, rel.tol = 1.5) |> 
@@ -164,4 +191,4 @@ intg_list <- list(
   pool_uvp = pool_intg
 )
 
-saveRDS(intg_list,'./Data/integrated_all_density.rds')
+saveRDS(intg_list,'./Data/integrated_all_biomass.rds')

@@ -1,13 +1,15 @@
 ####
-# Analysis - Depth Integrated Comparison --------------------------------------
+# Analysis - Biomass Integrated Comparison ------------------------------------
 ####
+
 rm(list = ls())
 library(EcotaxaTools)
 library(ggplot2)
 source('./R/Tools/tool_helper_style-functions-defaults.R')
 
+
 # |- Load in the Data ---------------------------------------------------------
-intg_dat <- readRDS('./Data/integrated_all_density.rds')
+intg_dat <- readRDS('./Data/integrated_all_biomass.rds')
 
 # |- Format Cruise factors ----------------------------------------------------
 intg_dat$moc$Cruise <- factor(intg_dat$moc$Cruise, 
@@ -16,13 +18,13 @@ intg_dat$moc$Cruise <- factor(intg_dat$moc$Cruise,
 
 
 intg_dat$avg_uvp$Cruise <- factor(intg_dat$avg_uvp$Cruise, 
-                              levels = c('jun_night_epi','jun_night_meso',
-                                         'jul_day_a','jul_day_b','jul_night'))
+                                  levels = c('jun_night_epi','jun_night_meso',
+                                             'jul_day_a','jul_day_b','jul_night'))
 
 
 intg_dat$pool_uvp$Cruise <- factor(intg_dat$pool_uvp$Cruise, 
-                                  levels = c('jun_night_epi','jun_night_meso',
-                                             'jul_day_a','jul_day_b','jul_night'))
+                                   levels = c('jun_night_epi','jun_night_meso',
+                                              'jul_day_a','jul_day_b','jul_night'))
 
 # |- Set taxa names -----------------------------------------------------------
 taxa_names <- unique(intg_dat$moc$taxa)
@@ -45,7 +47,7 @@ avg_intg_plot <- ggplot() +
                     ymax = mean_conc_m2 + sd_conc_m2, col = Cruise),
                 position = position_dodge(width = .9),
                 size = 1, width = .5)+
-  labs(x = "", y = "Integrated Abundance [num per square meter]",
+  labs(x = "", y = "Integrated Biomass [mg per square meter]",
        fill = "", col = "")+
   scale_color_manual(values = gg_cbb_col(7)[-c(1:2)])+
   scale_fill_manual(values = gg_cbb_col(7)[-c(1:2)])+
@@ -63,7 +65,7 @@ pool_intg_plot <- ggplot()+
              aes(x = taxa, y = intg, col = Cruise),
              position = position_dodge(width = .9),
              size = 5, shape = 18)+
-  labs(x = "", y = "Integrated Abundance [num per square meter]",
+  labs(x = "", y = "Integrated Biomass [mg per square meter]",
        fill = "", col = "")+
   scale_color_manual(values = gg_cbb_col(7)[-c(1:2)])+
   scale_fill_manual(values = gg_cbb_col(7)[-c(1:2)])+
@@ -100,15 +102,16 @@ pool_moc <- lapply(taxa_names, wilcox_tester, intg_dat$pool_uvp, intg_dat$moc)
 names(pool_moc) <- taxa_names
 avg_pool <- lapply(taxa_names, wilcox_tester, intg_dat$avg_uvp, intg_dat$pool_uvp)
 names(avg_pool) <- taxa_names
+
 ####
 # Save Data ------------------------------------------------------------------
 ####
 saveRDS(list(
   avged = avg_intg_plot,
   pooled = pool_intg_plot
-), './Output/main_fig_05_integration-plots.rds')
+), './Output/main_fig_08_biomass_integration-plots.rds')
 saveRDS(list(
   avg_moc = avg_moc,
   pool_moc = pool_moc,
   avg_pool = avg_pool
-), './Output/data_05_intg_test-res.rds')
+), './Output/data_08_intg_test-res.rds')
