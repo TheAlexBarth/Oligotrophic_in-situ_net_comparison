@@ -1,5 +1,0 @@
-```{r}
-for(i in 1:length(plot_list)) {
-  print(plot_list[[i]])
-}
-```
