@@ -39,7 +39,7 @@ ellps_vol2 <- function(df){
 }
 
 get_calc_esd <- function(df) {
-  calc_esd <- df[['esd']] * df[['pixel_mm']]
+  calc_esd <- df[['esd']] * 0.092
   return(calc_esd)
 }
 
