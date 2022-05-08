@@ -11,25 +11,25 @@ name_selector <- function(obj_name) {
                   'Acantharea','tnd<Rhizaria','tnd<Acantharea','Coelodendrum','Aulatractus','tnd<Coelodendridae',
                   'colonial<Rhizaria','Aulographis','tnd<Aulosphaeridae',
                   'Cannosphaeridae','colonial<Aulosphaeridae')
-
+  
   det_names <- c("detritus","feces","house","light<detritus","fiber<detritus",
                  "darksphere","temp circle","aggregates")
-
+  
   cope_names <- c("Copepoda","Eucalanidae","tnd<Copepoda")
-
+  
   chae_names <- c("Chaetognatha","tnd<Chaetognatha",
                   'head<Chaetognatha','tail<Chaetognatha')
-
+  
   worm_names <- c("Tomopteridae","Poeobius","Alciopidae","Annelida")
-
+  
   jell_names <- c("Cnidaria<Hydrozoa","Cnidaria<Metazoa","Salpida",
                   'Pelagia','Ctenophora<Metazoa','Siphonophorae')
-
+  
   trich_names <- c("puff","tuff","like<Trichodesmium","tnd<Trichodesmium")
-
+  
   spl_names <- c("Eumalacostraca","tnd<Eumalacostraca","Crustacea")
-
-
+  
+  
   if(obj_name %in% rhiz_names){
     new_name <- 'Rhizaria' #rename rhizaria
   } else if (obj_name %in% det_names) {
@@ -55,12 +55,13 @@ name_selector <- function(obj_name) {
   } else {
     new_name <- obj_name
   }
-
+  
   return(new_name)
 }
 
 #' uvp_renamer
-uvp_renamer <- function(vect) {
-  new_vect <- unlist(lapply(vect,name_selector))
+uvp_renamer <- function(df) {
+  name_col <- get_col_name(df, 'taxo_name')
+  new_vect <- unlist(lapply(df[[name_col]],name_selector))
   return(new_vect)
 }
