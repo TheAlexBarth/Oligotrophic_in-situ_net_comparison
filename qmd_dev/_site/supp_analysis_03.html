@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="quarto-0.9.80">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Oligotrophic Mesozooplankton Methods Comparison - Supplemental Figure 3 - Full size range of MOCNESS</title>
+  <title>Oligotrophic Mesozooplankton Methods Comparison - Supplemental Figure 5 - Full size range of MOCNESS compared to UVP</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -155,6 +155,10 @@
     <a class="dropdown-item" href="./main_analysis_02.html">
  <span class="dropdown-text">Relative Abundance</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./main_analysis_03.html">
+ <span class="dropdown-text">Select Density Profiles</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -163,6 +167,10 @@
         <li>
     <a class="dropdown-item" href="./supp_analysis_03.html">
  <span class="dropdown-text">Full Size Range Comparison</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./supp_analysis_04.html">
+ <span class="dropdown-text">All Density Profiles</span></a>
   </li>  
     </ul>
   </li>
@@ -189,7 +197,7 @@
 <main class="content page-columns page-full" id="quarto-document-content">
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title-block"><div><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
-<div class="quarto-title"><h1 class="title">Supplemental Figure 3 - Full size range of MOCNESS</h1></div></header>
+<div class="quarto-title"><h1 class="title">Supplemental Figure 5 - Full size range of MOCNESS compared to UVP</h1></div></header>
 <p>As noted in the core paper, the MOCNESS samples a much larger range of sized-plankton than the UVP. For comparison, we look at MOCNESS-collected plankton which are equal to or larger than the smallest observed UVP plankton (0.894mm). The comparison of that size range can be found <a href="./main_analysis_01.html">here</a>. In this analysis, the full size range of the MOCNESS is shown. Additionally, the table below shows the proportion of MOCNESS-collected plankton which are excluded because they are smaller than 0.894mm</p>
 <hr>
 <div class="cell">
@@ -227,7 +235,7 @@
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>moc_dat <span class="ot">&lt;-</span> moc_dat[moc_dat<span class="sc">$</span>taxo_name <span class="sc">%in%</span> comp_taxo,]</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>get_percentile <span class="ot">&lt;-</span> <span class="cf">function</span>(taxo) {</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  value <span class="ot">&lt;-</span> <span class="fu">ecdf</span>(moc_dat<span class="sc">$</span>calc_esd[moc_dat<span class="sc">$</span>taxo_name <span class="sc">==</span> taxo])(<span class="fl">0.894</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  value <span class="ot">&lt;-</span> <span class="fu">ecdf</span>(moc_dat<span class="sc">$</span>calc_esd[moc_dat<span class="sc">$</span>taxo_name <span class="sc">==</span> taxo])(<span class="fl">0.934</span>)</span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">round</span>(value<span class="sc">*</span><span class="dv">100</span>, <span class="dv">2</span>))</span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
@@ -241,8 +249,8 @@
 <span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>          <span class="at">rownames =</span> <span class="cn">FALSE</span>, <span class="at">caption =</span> <span class="st">'Mocness-collected taxa and percent excluded by 0.894 size cut off'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display column-screen-inset">
-<div id="htmlwidget-8c69d7cb30ecccc483c9" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-8c69d7cb30ecccc483c9">{"x":{"filter":"none","vertical":false,"caption":"<caption>Mocness-collected taxa and percent excluded by 0.894 size cut off<\/caption>","data":[["Annelida","Chaetognatha","Copepoda","Ostra/Clado","Shrimp-like"],[28.71,9.69,90.82,96.21,5.3]],"container":"<table class=\"hover\">\n  <thead>\n    <tr>\n      <th>Taxa<\/th>\n      <th>% Moc Excluded<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":1}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-26ea738f3a3b81fd39f3" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-26ea738f3a3b81fd39f3">{"x":{"filter":"none","vertical":false,"caption":"<caption>Mocness-collected taxa and percent excluded by 0.894 size cut off<\/caption>","data":[["Annelida","Chaetognatha","Copepoda","Ostra/Clado","Shrimp-like"],[30.03,11.01,91.19,96.74,6.98]],"container":"<table class=\"hover\">\n  <thead>\n    <tr>\n      <th>Taxa<\/th>\n      <th>% Moc Excluded<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":1}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 
@@ -250,7 +258,7 @@
 <!-- -->
 <div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title anchored" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb4" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> Supplemental Figure 3 - Full size range of MOCNESS</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> Supplemental Figure 5 - Full size range of MOCNESS compared to UVP</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>As noted in the core paper, the MOCNESS samples a much larger range of sized-plankton than the UVP. For comparison, we look at MOCNESS-collected plankton which are equal to or larger than the smallest observed UVP plankton (0.894mm). The comparison of that size range can be found <span class="co">[</span><span class="ot">here</span><span class="co">](./main_analysis_01.html)</span>. In this analysis, the full size range of the MOCNESS is shown. Additionally, the table below shows the proportion of MOCNESS-collected plankton which are excluded because they are smaller than 0.894mm</span>
@@ -280,7 +288,7 @@
 <span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>moc_dat <span class="ot">&lt;-</span> moc_dat[moc_dat<span class="sc">$</span>taxo_name <span class="sc">%in%</span> comp_taxo,]</span>
 <span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>get_percentile <span class="ot">&lt;-</span> <span class="cf">function</span>(taxo) {</span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>  value <span class="ot">&lt;-</span> <span class="fu">ecdf</span>(moc_dat<span class="sc">$</span>calc_esd[moc_dat<span class="sc">$</span>taxo_name <span class="sc">==</span> taxo])(<span class="fl">0.894</span>)</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>  value <span class="ot">&lt;-</span> <span class="fu">ecdf</span>(moc_dat<span class="sc">$</span>calc_esd[moc_dat<span class="sc">$</span>taxo_name <span class="sc">==</span> taxo])(<span class="fl">0.934</span>)</span>
 <span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">round</span>(value<span class="sc">*</span><span class="dv">100</span>, <span class="dv">2</span>))</span>
 <span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a></span>

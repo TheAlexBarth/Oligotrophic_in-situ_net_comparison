@@ -20,7 +20,7 @@ website:
           text: Select Density Profiles
       - text: 'Supplemental'
         menu:
-          - href: supp_analysis_03.qmd
+          - href: supp_analysis_05.qmd
             text: Full Size Range Comparison
           - href: supp_analysis_04.qmd
             text: All Density Profiles

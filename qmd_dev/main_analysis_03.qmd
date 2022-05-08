@@ -30,6 +30,6 @@ plot_grid(plot_list$June_Night_Copepoda + grid_theme,
           ncol = 3)
 ```
 
-Select Profiles are shown to highlight cases where: the vertical patterns measured by the MOCNESS are matched by the UVP (top row), the vertical patterns measured by the MOCNESS are not well matched by the UVP (mid row), and cases where the UVP captured organisms in depth regions where the MOCNESS did not (bottom row). All casts can be seen in [Supplemental Figure 4](./supp_analysis_04.html).
+Select Profiles are shown to highlight cases where: the vertical patterns measured by the MOCNESS are matched by the UVP (top row), the vertical patterns measured by the MOCNESS are not well matched by the UVP (mid row), and cases where the UVP captured organisms in depth regions where the MOCNESS did not (bottom row). All casts can be seen in [Supplemental Figure 6](./supp_analysis_06.html).
 
 These patterns show that the UVP and MOCNESS are inconsistent in their measurements of zooplankton communities. The pooled-cast UVP estimation method consistently underestimates zooplantkon densities for all taxa. However, the average-cast UVP estimation method is at times larger or lower than MOCNESS estimates in similar depth regions. The average-cast method does however allow for ability to measure variance between similar casts. For sparser organisms, this variance is is likely driven by the low sampling volume of the UVP. However, for organisms which occur in larger numbers (Copepoda & Shrimp-like crustaceans), patchiness of the plankton likely drive variation between casts.

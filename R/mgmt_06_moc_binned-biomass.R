@@ -22,7 +22,6 @@ comp_names <- c('Copepoda','Chaetognatha','Ostra/Clado','Shrimp-like')
 ##
 # this code is clunky because I haven't built up ecotaxa tools yet to work with zooscan well.
 # There is a lot of ugly code on how to get it done all hidden in the conc tools
-##
 
 ## |- Size trimming mocness & converting biovolume to drymass ----------------
 biomass_conv <- function(taxa) {
@@ -43,7 +42,7 @@ bv_dm <- function(df) {
 
 
 moc_list <- moc_list |> 
-  mod_zoo(function(x) x[x$calc_esd >= 0.894,]) |> 
+  mod_zoo(function(x) x[x$calc_esd >= 0.934,]) |> 
   mod_zoo(names_keep, comp_names) |>
   add_zoo(bv_dm, 'dry_mass')
 

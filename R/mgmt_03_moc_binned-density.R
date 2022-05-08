@@ -26,7 +26,7 @@ comp_names <- c('Copepoda','Chaetognatha','Annelida','Ostra/Clado','Shrimp-like'
 
 ## |- Size trimming mocness ---------------------------------------------------
 moc_list <- moc_list |> 
-  mod_zoo(function(x) x[x$calc_esd >= 0.894,]) |> 
+  mod_zoo(function(x) x[x$calc_esd >= 0.934,]) |> 
   mod_zoo(names_keep, comp_names)
 
 ## |- Making a list of concentrations -----------------------------------------

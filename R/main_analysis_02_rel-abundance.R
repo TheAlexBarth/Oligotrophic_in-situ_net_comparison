@@ -43,7 +43,7 @@ sort_sum <- function(df) {
 
 # |- Mocness Dropping Sizes -----------------
 drop_big <- function(df) {
-  rdf <- df[df$calc_esd >=0.894, ]
+  rdf <- df[df$calc_esd >=0.934, ]
   return(rdf)
 }
 moc_comp <- mod_zoo(moc_list, drop_big)
@@ -66,7 +66,7 @@ pool_uvp <- merge_casts(c(jun_uvp$zoo_files, jul_uvp$zoo_files),
 # Note that as I developed EcotaxaTools, there's better workflows for this
 # but I'm taking it quickly with the data structures as they are
 pool_rename <- function(df) {
-  new_names <- uvp_renamer(df[['name']])
+  new_names <- uvp_renamer(df)
   rdf <- df
   rdf[['name']] <- new_names
   rdf <- rdf[!(rdf$name %in% c('badfocus<artefact','bubble','detritus',

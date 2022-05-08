@@ -20,7 +20,7 @@ moc <- rbind(moc_list[[1]][,which(names(moc_list[[1]]) %in% c('taxo_name',
                   moc_list[[2]][,which(names(moc_list[[2]]) %in% c('taxo_name',
                                                                    'calc_esd'))])
 
-moc_comp <- moc[moc$calc_esd >= 0.894, ] #trim to smallest observed UVP size
+moc_comp <- moc[moc$calc_esd >= 0.934, ] #trim to smallest observed UVP size
 
 uvp_comp <- do.call(rbind, c(jun_uvp$zoo_files, jul_uvp$zoo_files))
 uvp_comp <- names_drop(uvp_comp, 'detritus')

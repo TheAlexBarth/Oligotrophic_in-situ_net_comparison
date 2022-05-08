@@ -18,5 +18,5 @@ Here, you can look at our main analyses as well as supplemental information and 
 
 -   Supplemental Figure 1 - An example of a multiple-imaged individual
 -   Supplemental Figure 2 - Investigation into duplicate-imaged individuals
--   [Supplemental Figure 3 - Full Size Range MOCNESS Compared to UVP](./supp_analysis_03.html)
--   [Supplemental Figure 4 - All Density Profiles](./supp_analysis_04.html)
+-   [Supplemental Figure 5 - Full Size Range MOCNESS Compared to UVP](./supp_analysis_05.html)
+-   [Supplemental Figure 6 - All Density Profiles](./supp_analysis_06.html)
