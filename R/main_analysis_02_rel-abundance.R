@@ -85,10 +85,11 @@ rel_moc_comp <- moc_comp |> rel_taxa() |> list_to_tib() |> sort_sum()
 rel_uvp <- pool_uvp |> rel_taxa() |> list_to_tib() |> sort_sum()
 
 # |- Reformatting ---------------------------------------------
-rel_moc$group <- factor(rel_moc$group, levels = c('jun', 'jul_m14',
-                                                  'jul_m15', 'jul_m16'))
-rel_moc_comp$group <- factor(rel_moc_comp$group, levels = c('jun', 'jul_m14',
-                                                  'jul_m15', 'jul_m16'))
+
+rel_moc$group <- factor(rel_moc$group, levels = c('jun_night', 'jul_day_a',
+                                                  'jul_day_b', 'jul_night'))
+rel_moc_comp$group <- factor(rel_moc_comp$group, levels = c('jun_night', 'jul_day_a',
+                                                            'jul_day_b', 'jul_night'))
 rel_uvp$group <- factor(rel_uvp$group, levels = c('jun_night','jul_night', 'jul_day'))
 
 

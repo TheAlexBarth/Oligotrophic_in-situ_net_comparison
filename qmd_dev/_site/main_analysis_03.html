@@ -161,7 +161,7 @@
  <span class="dropdown-text">Full Size Range Comparison</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./supp_analysis_04.qmd">
+    <a class="dropdown-item" href="./supp_analysis_06.html">
  <span class="dropdown-text">All Density Profiles</span></a>
   </li>  
     </ul>
@@ -190,7 +190,7 @@
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title-block"><div><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 <div class="quarto-title"><h1 class="title">Select Density Profiles</h1></div></header>
-<p>Density profiles of comparable taxa are shown when measured by the MOCNESS/ZOOSCAN and the UVP. UVP estimates were calculated two ways. In one method, similar UVP casts are pooled then the density of organisms in a depth bin were calculated <span class="math display">\[\frac{\sum_{i}^{N}individuals_{i}}{\sum_{i}^{N}volume sampled_{i}}\]</span>. The other method, density is calculated in individual uvp casts, then averaged between all similar casts: <span class="math display">\[\frac{\sum_{i=1}^{N} \frac{individuals_{i}}{volume sampled_{i}}}{N}\]</span> For all i casts, with a total of N casts.</p>
+<p>Density profiles of comparable taxa are shown when measured by the MOCNESS/ZOOSCAN and the UVP. All MOCNESS data are for plankton larger than 0.934mm. MOCNESS depth bins were determined by net-deployments. UVP depth bins are shown in 20m-bins. The UVP bin size is an <a href="./supp_analysis_04.html">import consideration</a> when calculating UVP abundance profiles. Density estimates from the UVP were calculated two ways. In one method, similar UVP casts are pooled then the density of organisms in a depth bin were calculated <span class="math display">\[\frac{\sum_{i}^{N}individuals_{i}}{\sum_{i}^{N}volume sampled_{i}}\]</span>. The other method, density is calculated in individual uvp casts, then averaged between all similar casts: <span class="math display">\[\frac{\sum_{i=1}^{N} \frac{individuals_{i}}{volume sampled_{i}}}{N}\]</span> For all i casts, with a total of N casts.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -224,8 +224,10 @@
 </div>
 </div>
 </div>
+<hr>
 <p>Select Profiles are shown to highlight cases where: the vertical patterns measured by the MOCNESS are matched by the UVP (top row), the vertical patterns measured by the MOCNESS are not well matched by the UVP (mid row), and cases where the UVP captured organisms in depth regions where the MOCNESS did not (bottom row). All casts can be seen in <a href="./supp_analysis_06.html">Supplemental Figure 6</a>.</p>
-<p>These patterns show that the UVP and MOCNESS are inconsistent in their measurements of zooplankton communities. The pooled-cast UVP estimation method consistently underestimates zooplantkon densities for all taxa. However, the average-cast UVP estimation method is at times larger or lower than MOCNESS estimates in similar depth regions. The average-cast method does however allow for ability to measure variance between similar casts. For sparser organisms, this variance is is likely driven by the low sampling volume of the UVP. However, for organisms which occur in larger numbers (Copepoda &amp; Shrimp-like crustaceans), patchiness of the plankton likely drive variation between casts.</p>
+<hr>
+<p>These patterns show that the UVP and MOCNESS are inconsistent in their measurements of zooplankton communities. The pooled-cast UVP estimation method consistently underestimates zooplantkon densities for all taxa. However, the average-cast UVP estimation method is at times larger or lower than MOCNESS estimates in similar depth regions. The average-cast method does however allow for ability to measure variance between similar casts. For sparser organisms, this variance is is likely driven by the low sampling volume of the UVP. However, for organisms which occur in larger numbers (Copepoda &amp; Shrimp-like crustaceans), patchiness of the plankton likely drive variation between casts. Users of the UVP need to consider the</p>
 
 
 <!-- -->
@@ -234,7 +236,7 @@
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Select Density Profiles"</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>Density profiles of comparable taxa are shown when measured by the MOCNESS/ZOOSCAN and the UVP. UVP estimates were calculated two ways. In one method, similar UVP casts are pooled then the density of organisms in a depth bin were calculated $$\frac{\sum_{i}^{N}individuals_{i}}{\sum_{i}^{N}volume sampled_{i}}$$. The other method, density is calculated in individual uvp casts, then averaged between all similar casts: $$\frac{\sum_{i=1}^{N} \frac{individuals_{i}}{volume sampled_{i}}}{N}$$ For all i casts, with a total of N casts.</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>Density profiles of comparable taxa are shown when measured by the MOCNESS/ZOOSCAN and the UVP. All MOCNESS data are for plankton larger than 0.934mm. MOCNESS depth bins were determined by net-deployments. UVP depth bins are shown in 20m-bins. The UVP bin size is an <span class="co">[</span><span class="ot">import consideration</span><span class="co">](./supp_analysis_04.html)</span> when calculating UVP abundance profiles. Density estimates from the UVP were calculated two ways. In one method, similar UVP casts are pooled then the density of organisms in a depth bin were calculated $$\frac{\sum_{i}^{N}individuals_{i}}{\sum_{i}^{N}volume sampled_{i}}$$. The other method, density is calculated in individual uvp casts, then averaged between all similar casts: $$\frac{\sum_{i=1}^{N} \frac{individuals_{i}}{volume sampled_{i}}}{N}$$ For all i casts, with a total of N casts.</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
@@ -261,10 +263,13 @@
 <span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>          plot_list<span class="sc">$</span>July_Night_Annelida <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="fu">c</span>(.<span class="dv">80</span>,.<span class="dv">35</span>)),</span>
 <span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>          <span class="at">ncol =</span> <span class="dv">3</span>)</span>
 <span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>Select Profiles are shown to highlight cases where: the vertical patterns measured by the MOCNESS are matched by the UVP (top row), the vertical patterns measured by the MOCNESS are not well matched by the UVP (mid row), and cases where the UVP captured organisms in depth regions where the MOCNESS did not (bottom row). All casts can be seen in <span class="co">[</span><span class="ot">Supplemental Figure 6</span><span class="co">](./supp_analysis_06.html)</span>.</span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>These patterns show that the UVP and MOCNESS are inconsistent in their measurements of zooplankton communities. The pooled-cast UVP estimation method consistently underestimates zooplantkon densities for all taxa. However, the average-cast UVP estimation method is at times larger or lower than MOCNESS estimates in similar depth regions. The average-cast method does however allow for ability to measure variance between similar casts. For sparser organisms, this variance is is likely driven by the low sampling volume of the UVP. However, for organisms which occur in larger numbers (Copepoda &amp; Shrimp-like crustaceans), patchiness of the plankton likely drive variation between casts.</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>-------------------------------------------------------------------------------</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>Select Profiles are shown to highlight cases where: the vertical patterns measured by the MOCNESS are matched by the UVP (top row), the vertical patterns measured by the MOCNESS are not well matched by the UVP (mid row), and cases where the UVP captured organisms in depth regions where the MOCNESS did not (bottom row). All casts can be seen in <span class="co">[</span><span class="ot">Supplemental Figure 6</span><span class="co">](./supp_analysis_06.html)</span>.</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------------</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>These patterns show that the UVP and MOCNESS are inconsistent in their measurements of zooplankton communities. The pooled-cast UVP estimation method consistently underestimates zooplantkon densities for all taxa. However, the average-cast UVP estimation method is at times larger or lower than MOCNESS estimates in similar depth regions. The average-cast method does however allow for ability to measure variance between similar casts. For sparser organisms, this variance is is likely driven by the low sampling volume of the UVP. However, for organisms which occur in larger numbers (Copepoda &amp; Shrimp-like crustaceans), patchiness of the plankton likely drive variation between casts. Users of the UVP need to consider the </span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </main> <!-- /main -->

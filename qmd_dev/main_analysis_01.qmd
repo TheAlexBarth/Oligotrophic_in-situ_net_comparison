@@ -11,7 +11,7 @@ dat_list <- readRDS('../Output/data_01_size-range-dfs.rds')
 plot_list <- readRDS('../Output/main_fig_01_matched-size-distribution.rds')
 ```
 
-The MOCNESS and UVP inherently sample different size ranges. The MOCNESS was equipped with 153 micron mesh while the UVP only saves particles above 600 microns. To compare the effectiveness of the two devices, we analyzed MOCNESS images equal to or larger to what we are able to measure with the UVP. This comparison focuses only on taxa which made up a [substantial](./main_analysis_02.html) portion of taxa sampled by both instruments. It is important to note that although UVP is set to save particle images above 600 microns, for comparable sized taxa, larger sizes are needed to accurately distinguish plankton from particles. The smallest recorded comparable organism was a 894 micron Shrimp-like crustacean. As such, this was the minimum size for inclusion for any MOCNESS-collected plankton in subsequent analyses.
+The MOCNESS and UVP inherently sample different size ranges. The MOCNESS was equipped with 153 micron mesh while the UVP only saves particles above 600 microns. To compare the effectiveness of the two devices, we analyzed MOCNESS images equal to or larger to what we are able to measure with the UVP. This comparison focuses only on taxa which made up a [substantial](./main_analysis_02.html) portion of taxa sampled by both instruments. It is important to note that although UVP is set to save particle images above 600 microns, for comparable sized taxa, larger sizes are needed to accurately distinguish plankton from particles. The smallest recorded comparable organism was a 934 micron Shrimp-like crustacean. As such, this was the minimum size for inclusion for any MOCNESS-collected plankton in subsequent analyses.
 
 Here we compare All taxa, Annelids, Chaetognaths, Copepods, Shrimp-like Crustaceans, and Ostracod/Cladoceans.
 
@@ -19,6 +19,10 @@ Here we compare All taxa, Annelids, Chaetognaths, Copepods, Shrimp-like Crustace
 #| column: body-outset
 print(plot_list)
 ```
+------------------------------------------------------------------------
+
+Notably, there is a large size overlap for many of the taxa. However, there is a portion of large Copepods, Chaetognaths, and Shrimp-like crustaceans sampled by the MOCNESS which are seemingly undersampled by the UVP. This is possibly due to avoidance of the UVP by these large, mobile organisms. 
+The UVP samples a slightly larger range of annlids. However this observation is likely due to polychaetes getting broken into smaller fragments in the MOCNESS, and thus not representative of their *in situ* size. Additionally, the UVP samples a larger size range of Ostracods/Cladocerans. However, this may be an artefact of the inability to identify smaller cladocerans in UVP images.
 
 ------------------------------------------------------------------------
 
@@ -58,7 +62,7 @@ moc_dat <- summary_df(dat_list$moc_trim, 'calc_esd', 'taxo_name')
 
 uvp_dat <- summary_df(dat_list$uvp, 'calc_esd', 'name')
 
-datatable(moc_dat, class = 'hover', caption = 'Size summary statistics for MOCNESS-collected plankton above 0.894mm. Units are mm.',
+datatable(moc_dat, class = 'hover', caption = 'Size summary statistics for MOCNESS-collected plankton above 0.934mm. Units are mm.',
           rownames = F)
 
 ```

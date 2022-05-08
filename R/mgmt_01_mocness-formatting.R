@@ -54,10 +54,10 @@ moc_list <- lapply(moc_list, loop_map)
 moc_list <- mod_zoo(moc_list, names_drop, 'not-living') #drop all non-living
 
 # make into a clear list
-moc_list <- list(jun = moc_list$ae1912, 
-                 jul_m14 = split(moc_list$ae1917, f= moc_list$ae1917$sample_towID)[[1]],
-                 jul_m15 = split(moc_list$ae1917, f= moc_list$ae1917$sample_towID)[[2]],
-                 jul_m16 = split(moc_list$ae1917, f= moc_list$ae1917$sample_towID)[[3]])
+moc_list <- list(jun_night = moc_list$ae1912, 
+                 jul_day_a = split(moc_list$ae1917, f= moc_list$ae1917$sample_towID)[[1]],
+                 jul_day_b = split(moc_list$ae1917, f= moc_list$ae1917$sample_towID)[[2]],
+                 jul_night = split(moc_list$ae1917, f= moc_list$ae1917$sample_towID)[[3]])
 
 ####
 # Save Mocness Data ---------------------------

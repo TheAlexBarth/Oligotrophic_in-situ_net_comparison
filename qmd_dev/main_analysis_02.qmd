@@ -2,7 +2,7 @@
 title: Comparison of Relative Abundance by two devices
 ---
 
-Here is a comparison of the relative abundance of different taxa sampled by the two devices
+Here is a comparison of the relative abundance of different taxa sampled by the two devices. MOCNESS data shown are for all plankton larger than 0.934mm.
 
 ```{r Set-up, warning = F}
 rm(list = ls())
@@ -14,7 +14,7 @@ plot_list <- readRDS('../Output/main_fig_02_rel-contribution.rds')
 dat_list <- readRDS('../Output/data_02_rel-contrib.rds')
 ```
 
-```{r Plot, warning = F, fig.height=5, fig.cap = 'Relative contribution of different zooplankton groups to the total measured by MOCNESS (left) and UVP (right). For MOCNESS, June was night, July had three tows; two daytime (m14, m15) and one nighttime (m16)', out.width="100%"}
+```{r Plot, warning = F, fig.height=5, fig.cap = 'Relative contribution of different zooplankton groups to the total measured by MOCNESS (left) and UVP (right). For MOCNESS, June was night, July had three tows; two daytime and one nighttime. All MOCNESS plankton are larger than 0.934mm', out.width="100%"}
 #| column: body-outset
 plot_grid(plot_list$moc_comp + theme(axis.text.x = element_text(angle = 45,
                                                                 hjust = 1),
@@ -29,6 +29,10 @@ plot_grid(plot_list$moc_comp + theme(axis.text.x = element_text(angle = 45,
                                      legend.position = 'bottom',
                                plot.background = element_blank()))
 ```
+---------------------------------------------------------------------------
+The proportion of copepods is similar albeit slightly larger in the MOCNESS compared to the UVP. However, the proportion of other taxa are very different between the two sampling methods. The MOCNESS has a much larger portion of Chaetognaths and Shrimp-like crustaceans. The UVP has a large portion of *Trichodesmium* and Rhizaria, which are nearly unsampled by the MOCNESS. This is unsurprising as the MOCNESS is known to destroy fragile organisms (like *Trichodesmium* and Rhizaria).
+There is only an overlap of comparable organisms for Copepods, Chaetognatha, Annelids, Shrimp-like Crustaceans, and Ostracods/Cladoerans.
+
 
 ---------------------------------------------------------------------------
 
@@ -37,7 +41,7 @@ Pooling across all Tows/Casts we can get a general Sense of how the UVP and MOCN
 ```{r Table-Moc-all}
 #| column: body-outset
 datatable(dat_list$moc_filtered_all, rownames = F, colnames = c('Taxa','Percent Contribution'),
-          caption = 'Relative Contribution of taxa collected by MOCNESS which were above 0.894mm.')
+          caption = 'Relative Contribution of taxa collected by MOCNESS which were above 0.934')
 ```
 ```{r Table-UVP-all}
 #| column: body-outset
@@ -50,10 +54,13 @@ Below are data which correspond to the figures shown above:
 
 
 ```{r Table-Moc-by-cast}
+#| column: body-outset
 datatable(dat_list$moc_filtered, rownames = F, colnames = c('Taxa','Percent Contribution','Tow'),
-          caption = 'Relative Contribution of taxa collected by MOCNESS which were above 0.894mm. Separated by cast')
+          caption = 'Relative Contribution of taxa collected by MOCNESS which were above 0.934 Separated by cast')
 ```
+
 ```{r table-uvp-by-cast}
+#| column: body-outset
 datatable(dat_list$uvp, rownames = F, colnames = c('Taxa','Percent Contribution','Tow'),
           caption = 'Relative Contribution of taxa imaged by the UVP. Separated by month and time of day')
 ```
