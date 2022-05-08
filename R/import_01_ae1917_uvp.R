@@ -27,13 +27,22 @@ ae1917_ecopart <- mod_zoo(ae1917_ecopart,
 
 
 # |- add the calc_esd, body volume and major axis------------------------------
+# WARNGING - df$pixel_mm is incorrect in the original metadata. I learned this 20220508
+# Use 0.092, that is why the ellps_vol function in ecotaxatools does not work
+
+ellps_vol2 <- function(df){
+  major_mm <- df$major * 0.092
+  minor_mm <- df$minor * 0.092
+  vol_mmcu <- (4/3) * pi * (minor_mm/2)^2 * (major_mm/2)
+  return(vol_mmcu)
+}
 get_calc_esd <- function(df) {
   calc_esd <- df[['esd']] * df[['pixel_mm']]
   return(calc_esd)
 }
 
 ae1917_ecopart <- add_zoo(ae1917_ecopart, get_calc_esd, 'calc_esd')
-ae1917_ecopart <- add_zoo(ae1917_ecopart, ellps_vol, 'body_vol')
+ae1917_ecopart <- add_zoo(ae1917_ecopart, ellps_vol2, 'body_vol')
 
 
 # |- Trim depth ---------------------------------------------------------------
@@ -49,7 +58,7 @@ ae1917_ecopart$par_files <- mod_zoo(ae1917_ecopart$par_files, trim_depth)
 
 ####
 # Save Ecopart file as a raw for supplement -----------------------------------
-#####
+####
 saveRDS(ae1917_ecopart, './Data/uvp_ae1917_raw.rds')
 
 
