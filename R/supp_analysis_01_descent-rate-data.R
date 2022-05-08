@@ -102,7 +102,7 @@ rates_plot <- ggplot() +
             col = 'grey', alpha = 0.25)+
   geom_line(data = avg_rate, aes(x = depth, y = mean_dr),
             col = 'black', size = 2)+
-  geom_hline(yintercept = 0.7, col = 'red')+
+  geom_hline(yintercept = 0.622, col = 'red')+
   geom_hline(yintercept = 0, col = 'black')+
   scale_x_reverse()+
   coord_flip()+
