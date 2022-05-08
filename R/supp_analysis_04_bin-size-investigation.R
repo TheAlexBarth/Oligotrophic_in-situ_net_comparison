@@ -34,7 +34,7 @@ integrate_bin_width <- function(ecopart_obj,...) {
   out_list <- vector('list', length(casts))
   names(out_list) <- casts
   for(i in 1:length(casts)) {
-    widths <- get_factors(max_d[i])[which]
+    widths <- get_factors(max_d[i])
     bin_list <- lapply(widths, conc_at_width,
                             casts[i], max_d[i], ecopart_obj)
     names(bin_list) <- widths

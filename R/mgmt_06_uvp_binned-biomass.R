@@ -67,13 +67,13 @@ ae1917_map$night <- ae1917_map$night[which(ae1917_map$night %in% names(uvp_list$
 #|- Independent Binning -------------------------------------------------------
 
 # make a list for concentration storage
-indp_depth_breaks <- list(list(db = seq(0,1000,10),
+indp_depth_breaks <- list(list(db = seq(0,1000,20),
                                ToD = 'night'),
-                          list(db = seq(0,270,10),
+                          list(db = seq(0,270,20),
                                ToD = 'day'),
-                          list(db = seq(0,260,10),
+                          list(db = seq(0,260,20),
                                ToD = 'day'),
-                          list(db = seq(0,260,10),
+                          list(db = seq(0,260,20),
                                ToD = 'night'))
 
 names(indp_depth_breaks) <- c('jun_night',
