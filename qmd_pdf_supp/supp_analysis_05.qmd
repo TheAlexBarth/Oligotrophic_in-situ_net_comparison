@@ -1,0 +1,21 @@
+---
+title: Supplemental Figure 5 - Full size range of MOCNESS compared to UVP
+---
+
+As noted in the core paper, the MOCNESS samples a much larger range of sized-plankton than the UVP. For comparison, we look at MOCNESS-collected plankton which are equal to or larger than the smallest observed UVP plankton (0.934). The comparison of that size range can be found here. In this analysis, the full size range of the MOCNESS is shown. Additionally, the table below shows the proportion of MOCNESS-collected plankton which are excluded because they are smaller than 0.894mm
+
+------------------------------------------------------------------------
+
+```{r set-up, warning=F}
+rm(list = ls())
+library(ggplot2)
+library(DT)
+
+plot_list <- readRDS('../Output/supp_fig_01_full-size-distribution.rds')
+dat_list <- readRDS('../Output/data_01_size-range-dfs.rds')
+```
+
+```{r Plotting, fig.height=10, out.width='100%',fig.cap= 'Size distributions for select taxa.', dpi= 300}
+#| column: body-outset
+print(plot_list)
+```

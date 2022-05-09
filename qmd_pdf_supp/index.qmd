@@ -1,0 +1,7 @@
+# Supplemental Figures {.unnumbered}
+
+This pdf holds all the supplemental figures for "Comparison of an in-situ imaging device and net-based method to study mesozooplankton communities in an oligotrophic system."
+
+All figures can also be viewed at the [static io page](www.TheAlexBarth.github.io/Oligotrophic_in-situ_net_comparison").
+
+All code and data are available on the [github repo](https://github.com/TheAlexBarth/Oligotrophic_in-situ_net_comparison) or in the zip file where this file is located.

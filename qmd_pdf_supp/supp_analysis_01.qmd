@@ -1,0 +1,27 @@
+---
+title: "Supplemental Figure 1: Descent Rate & Volume Sampled"
+---
+
+The UVP descends through the water column taking photographs at a rate of 20Hz. Each UVP image captures an 18.8cm x 18.8cm x 3.11cm FOV. This creates the potential for overlap of images, capturing multiple instances of one individual
+
+These figures show the raw descent rates of all cast and the volume sampled in 1-m bins. These also display the potential for overlap, however - it is impossible to truly know if overlap occured from this data because the pressure sensor on the UVP has a specificity of 10cm.
+
+```{r Set-up, warning=FALSE}
+rm(list = ls())
+library(EcotaxaTools)
+library(ggplot2)
+library(cowplot)
+
+dr_plot <- readRDS('../Output/supp_fig_01_descent-rates.rds')
+vol_plot <- readRDS('../Output/supp_fig_01_vol-sampled.rds')
+
+dr_dat <- readRDS('../Output/data_supp_01_descent-averages.rds')
+```
+
+```{r dr plot, warning=FALSE, fig.cap='Supplemental Figure 1. Left: Descent rate calculated from raw uvp data. Grey lines show each individual cast while the thick black line shows the average of all casts. The red line shows the rate at which image ovrelap is likely (0.622m/s) because the UVP is descending too slowly to clear 3.11cm between images. If descent rate is below 0, this indicates the UVP was moving upwards. These data are from before the ecopart descent filter is applied. Right. Volume sampled in 1-m bins from UVP data after descent filter. Red line shows the maximum volume which can be imaged with no overlap in a 1-m bin, assuming images are perfectly stacked vertically.'}
+plot_grid(dr_plot, vol_plot)
+```
+
+------------------------------------------------------------------------
+
+The UVP was lowered at a slower rate from 0-200m than it was from 200-1000m. The average descent rate (0.653 m/s) in the top 200m of the water column was just above the rate at which overlap is likely (0.622 m/s). Additionally, in the top 200m, there are more images taken (a higher volume sampled) than would be possible if no overlap occurred. This indicates that overlap is either occurring or the UVP is moving horizontally in the water column. In all likelihood both of these are a possibility considering ship-drift. In the mesopelagic, overlap is much less likely because the UVP descends at a much faster rate (average 1.099 m/s). The impact of duplicate images are investigated [here](./supp_analysis_03.html)

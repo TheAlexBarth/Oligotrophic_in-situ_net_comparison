@@ -1,0 +1,23 @@
+project:
+  type: book
+
+book:
+  title: "Supplement Figures"
+  author: "Alex Barth"
+  chapters:
+    - index.qmd
+    - supp_analysis_01.qmd
+    - supp_analysis_02.qmd
+    - supp_analysis_03.qmd
+    - supp_analysis_04.qmd
+    - supp_analysis_05.qmd
+    - supp_analysis_06.qmd
+    - supp_analysis_07.qmd
+execute: 
+  echo: false
+    
+format:
+  pdf:
+    documentclass: scrreprt
+
+always_allow_html: true
