@@ -81,10 +81,10 @@ names(indp_conc_list) <- names(indp_depth_breaks)
 
 # |- Matched binning ----------------------------------------------------------
 
-matched_depth_breaks <- list(list(db = c(5.1,48,150.5,253.7,
+matched_depth_breaks <- list(list(db = c(0,48,150.5,253.7,
                                          348.3,590.4,791.6,995.7),
                           ToD = 'night'),
-                     list(db = c(0.8,20,50.7,80.6,111.1,140.1,
+                     list(db = c(0,20,50.7,80.6,111.1,140.1,
                                  168.7,219.7,270.4),
                           ToD = 'day'),
                      list(db = c(0,30.7,59,89,119.4,150.6,

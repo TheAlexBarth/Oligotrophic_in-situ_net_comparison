@@ -6,7 +6,7 @@ Supplemental information for "Comparison of an in-situ imaging device and net-ba
 
 This study analyzed abundance and biomass estimates collected through two methods: A traditional depth-specific net system (MOCNESS) and a novel *in-situ* imaging tool, the UVP.
 
-Here, you can look at our main analyses as well as supplemental information and figures. Data are available on the [project's github repo](https://github.com/TheAlexBarth/Oligotrophic_in situ_net_comparison) along with r scripts for processing the data. Much of the data analysis relies on Alex Barth's [EcotaxaTools Package](https://github.com/TheAlexBarth/EcotaxaTools) which is currently not yet available on CRAN. Additionally, all data on the repo are in .rds format to allow for storage of complex objects. If you would like data for this project in either csv or json format, send an email to Alex Barth (AB93@email.sc.edu).
+Here, you can look at our main analyses as well as supplemental information and figures. Data are available on the [project's github repo](https://github.com/TheAlexBarth/Oligotrophic_in%20situ_net_comparison) along with r scripts for processing the data. Much of the data analysis relies on Alex Barth's [EcotaxaTools Package](https://github.com/TheAlexBarth/EcotaxaTools) which is currently not yet available on CRAN. Additionally, all data on the repo are in .rds format to allow for storage of complex objects. If you would like data for this project in either csv or json format, send an email to Alex Barth (AB93\@email.sc.edu).
 
 ### Main Analyses:
 

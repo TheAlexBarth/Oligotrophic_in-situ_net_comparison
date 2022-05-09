@@ -73,7 +73,7 @@ for(i in 1:length(taxa_names)) {
   taxa = taxa_names[i]
   pool_plot[[i]] <- ggplot(pooled_all[pooled_all$taxa == taxa,])+
     geom_point(aes(x = conc_m3_moc, y = conc_m3_uvp, col = group),
-               size = 2) +
+               size = 4) +
     geom_abline(slope = 1, intercept = 0,
                 size = 1, col = gg_cbb_col(2)[1],
                 linetype = 'dashed')+
@@ -91,7 +91,7 @@ for(i in 1:length(taxa_names)) {
   
   avg_plot[[i]] <- ggplot(avg_all[avg_all$taxa == taxa,])+
     geom_point(aes(x = conc_m3_moc, y = conc_m3_uvp, col = group),
-               size = 2) +
+               size = 4) +
     geom_abline(slope = 1, intercept = 0,
                 size = 1, col = gg_cbb_col(2)[1],
                 linetype = 'dashed')+
