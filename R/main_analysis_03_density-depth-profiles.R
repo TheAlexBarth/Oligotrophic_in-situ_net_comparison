@@ -32,7 +32,7 @@ for(i in 1:length(profile_names)) {
       geom_rect(data = moc_conc[[i]][moc_conc[[i]]$taxa == taxa,],
                 aes(xmin = min_d,xmax = max_d,
                     ymin = 0, ymax = conc_m3,
-                    fill = 'Mocness', color = 'Mocness'),
+                    fill = 'MOCNESS', color = 'MOCNESS'),
                 alpha = .5)+
       geom_rect(data = uvp_list$pooled[[i]][uvp_list$pooled[[i]]$taxa == taxa,],
                 aes(xmin = min_d, xmax = max_d,
@@ -47,9 +47,9 @@ for(i in 1:length(profile_names)) {
                         color = 'Avg-Cast UVP'),
                     size = 1, alpha = 0.5)+
       scale_color_manual(values = c(gg_cbb_col(2),'#8a5f00'),
-                         breaks = c('Mocness','Pooled-Cast UVP', 'Avg-Cast UVP'),
+                         breaks = c('MOCNESS','Pooled-Cast UVP', 'Avg-Cast UVP'),
                          limits = 'Avg-Cast UVP')+
-      scale_fill_manual(values = gg_cbb_col(2), breaks = c('Mocness', 'Pooled-Cast UVP'))+
+      scale_fill_manual(values = gg_cbb_col(2), breaks = c('MOCNESS', 'Pooled-Cast UVP'))+
       scale_x_reverse()+
       coord_flip()+
       labs(x = 'Depth [m]', y = paste0(taxa," [per cubic m]"),

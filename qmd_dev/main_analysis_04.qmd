@@ -1,0 +1,51 @@
+---
+title: "Regression of density estimates"
+---
+
+To compare similarity of UVP and MOCNESS estimates of taxa abundance, linear regressions were constructed to compare estimates between the devices of similarly sized taxa (above 0.934mm) in matching depth bins.
+
+UVP Estimates were calculated following both a pooled-cast approach
+
+Below are plotted results. Grey lines indicate the 1:1 line (if estimates were equal between the devices). Black lines indicate the line of best fit.
+
+```{r Set-up, echo = F, warning = F}
+rm(list = ls())
+library(ggplot2)
+library(EcotaxaTools)
+library(cowplot)
+reg_plots <- readRDS('../Output/main_fig_04_regression-plots.rds')
+reg_dat <- readRDS('../Output/data_04_regressions-models.rds')
+```
+
+```{r Plotting, warning = F,echo = F, message=F, fig.height=10, fig.width=8, echo = F, fig.cap='Regressions between UVP-derived estimates of abundance (num/ square meter) and MOCNESS estimates. Left Column displays pooled-cast method and righ column displays avgerage-cast method. Grey line indicates 1:1 line, Black line is line of best fit.'}
+#| Column: body-outset
+plot_theme <- theme(legend.position = 'none')
+plot_grid(reg_plots$pooled$Annelida+plot_theme, reg_plots$avged$Annelida+plot_theme,
+          reg_plots$pooled$Chaetognatha+plot_theme, reg_plots$avged$Chaetognatha+plot_theme,
+          reg_plots$pooled$Copepoda+plot_theme, reg_plots$avged$Copepoda+plot_theme,
+          reg_plots$pooled$`Ostra/Clado`+plot_theme, reg_plots$avged$`Ostra/Clado`+plot_theme,
+          reg_plots$pooled$`Shrimp-like`+plot_theme, reg_plots$avged$`Shrimp-like`+ plot_theme,
+          get_legend(reg_plots$avged$`Shrimp-like` + theme(legend.position = 'right')),
+          ncol = 2)
+```
+
+***
+Across all taxa, there are no clear relationships between MOCNESS and UVP estimates in similar depth bins. There is a significant relationship between density estimates for Shrimp-like crustaceans (with both UVP methods), however this is likely driven by the high-influence outliers. It is also clear from the plot that there are high residual heteroskedasticty in all regressions. 
+
+
+Regression summaries can be found below:
+```{R Regression Summaries}
+get_reg_sum <- function(reg) {
+  reg_summary <- summary(reg)
+  rvect <- reg_summary$coefficients[2,-3]
+  rvect[4] <- reg_summary$r.squared
+  names(rvect) <- c('Slope_Estimate','Std.Error','p-value','r.squared')
+  return(rvect)
+}
+pool_sum <- lapply(reg_dat$pooled, get_reg_sum) |> list_to_tib('Taxa')
+avg_sum <- lapply(reg_dat$avged, get_reg_sum) |> list_to_tib('Taxa')
+#| Column: body-outset
+DT::datatable(pool_sum, class = 'hover', caption = 'Pooled-cast method UVP vs MOCNESS regression output')
+#| Column: body-outset
+DT::datatable(avg_sum, class = 'hover', caption = 'Average-cast method UVP vs MOCNESS regression output')
+```

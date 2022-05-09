@@ -18,6 +18,16 @@ website:
           text: Relative Abundance
         - href: main_analysis_03.qmd
           text: Select Density Profiles
+        - href: main_analysis_04.qmd
+          text: Abundance Regressions
+        - href: main_analysis_05.qmd
+          text: Depth Integrated Abundance
+        - href: main_analysis_06.qmd
+          text: Select Biomass Profiles
+        - href: main_analysis_07.qmd
+          text: Biomass Regressions
+        - href: main_analysis_08.qmd
+          text: Depth Integrated Biomass
       - text: 'Supplemental'
         menu:
           - href: supp_analysis_01.qmd

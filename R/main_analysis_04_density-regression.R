@@ -73,7 +73,7 @@ for(i in 1:length(taxa_names)) {
   taxa = taxa_names[i]
   pool_plot[[i]] <- ggplot(pooled_all[pooled_all$taxa == taxa,])+
     geom_point(aes(x = conc_m3_moc, y = conc_m3_uvp, col = group),
-               size = 4) +
+               size = 2) +
     geom_abline(slope = 1, intercept = 0,
                 size = 1, col = gg_cbb_col(2)[1],
                 linetype = 'dashed')+
@@ -82,7 +82,7 @@ for(i in 1:length(taxa_names)) {
                 size = 1, se = F, col = 'black')+
     scale_y_continuous(expand = expansion(c(0,.1)))+
     scale_x_continuous(expand = expansion(c(0,0.1)))+
-    labs(x = "Mocness Density",y = "UVP Density", subtitle = taxa,
+    labs(x = "MOCNESS Density",y = "UVP Density", subtitle = taxa,
          col = '')+
     scale_color_manual(values = gg_cbb_col(length(unique(pooled_all$group))))+
     theme_bw()+
@@ -91,7 +91,7 @@ for(i in 1:length(taxa_names)) {
   
   avg_plot[[i]] <- ggplot(avg_all[avg_all$taxa == taxa,])+
     geom_point(aes(x = conc_m3_moc, y = conc_m3_uvp, col = group),
-               size = 4) +
+               size = 2) +
     geom_abline(slope = 1, intercept = 0,
                 size = 1, col = gg_cbb_col(2)[1],
                 linetype = 'dashed')+
@@ -100,7 +100,7 @@ for(i in 1:length(taxa_names)) {
                 size = 1, se = F, col = 'black')+
     scale_y_continuous(expand = expansion(c(0,.1)))+
     scale_x_continuous(expand = expansion(c(0,0.1)))+
-    labs(x = "Mocness Density",y = "UVP Density", subtitle = taxa)+
+    labs(x = "MOCNESS Density",y = "UVP Density", subtitle = taxa)+
     scale_color_manual(values = gg_cbb_col(length(unique(avg_all$group))))+
     theme_bw()+
     ab_theme+

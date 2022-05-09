@@ -41,7 +41,7 @@ sort_sum <- function(df) {
 
 
 
-# |- Mocness Dropping Sizes -----------------
+# |- MOCNESS Dropping Sizes -----------------
 drop_big <- function(df) {
   rdf <- df[df$calc_esd >=0.934, ]
   return(rdf)
@@ -101,7 +101,7 @@ rel_uvp$group <- factor(rel_uvp$group, levels = c('jun_night','jul_night', 'jul_
 # Above, the data are separated out by casts, but if we want to know
 # what the relative abundance across all casts, we need to pool
 
-# |- Mocness ------------------
+# |- MOCNESS ------------------
 moc_map <- list(
   'all' = names(moc_comp)
 )
