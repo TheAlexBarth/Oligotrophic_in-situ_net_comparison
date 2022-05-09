@@ -6,7 +6,7 @@ Supplemental information for "Comparison of an in-situ imaging device and net-ba
 
 This study analyzed abundance and biomass estimates collected through two methods: A traditional depth-specific net system (MOCNESS) and a novel *in-situ* imaging tool, the UVP.
 
-Here, you can look at our main analyses as well as supplemental information and figures. Data are available on the [project's github repo](https://github.com/TheAlexBarth/Oligotrophic_in-situ_net_comparison) along with r scripts for processing the data. Much of the data analysis relies on Alex Barth's [EcotaxaTools Package](https://github.com/TheAlexBarth/EcotaxaTools) which is currently not yet available on CRAN. Additionally, all data on the repo are in .rds format to allow for storage of complex objects. If you would like data for this project in either csv or json format, send an email to Alex Barth (AB93@email.sc.edu).
+Here, you can look at our main analyses as well as supplemental information and figures. Data are available on the [project's github repo](https://github.com/TheAlexBarth/Oligotrophic_in situ_net_comparison) along with r scripts for processing the data. Much of the data analysis relies on Alex Barth's [EcotaxaTools Package](https://github.com/TheAlexBarth/EcotaxaTools) which is currently not yet available on CRAN. Additionally, all data on the repo are in .rds format to allow for storage of complex objects. If you would like data for this project in either csv or json format, send an email to Alex Barth (AB93@email.sc.edu).
 
 ### Main Analyses:
 
@@ -16,7 +16,10 @@ Here, you can look at our main analyses as well as supplemental information and 
 
 ### Supplemental Analyses & Figures
 
--   Supplemental Figure 1 - An example of a multiple-imaged individual
--   Supplemental Figure 2 - Investigation into duplicate-imaged individuals
+-   [Supplemental Figure 1 - Descent Rate & Volume Sampled](./supp_analysis_01.html)
+-   [Supplemental Figure 2 - An example of a multiple-imaged individual](./supp_analysis_02.html)
+-   [Supplemental Figure 3 - Impact of multiple-imaged individuals on density estimates](./supp_analysis_03.html)
+-   [Supplemental Figure 4 - Bin-Size Investigation](./supp_analysis_04.html)
 -   [Supplemental Figure 5 - Full Size Range MOCNESS Compared to UVP](./supp_analysis_05.html)
 -   [Supplemental Figure 6 - All Density Profiles](./supp_analysis_06.html)
+-   [Supplemental Figure 7 - All Biomass Profiles](./supp_analysis_07.html)

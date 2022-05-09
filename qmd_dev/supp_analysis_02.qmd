@@ -1,0 +1,7 @@
+---
+title: "Supplemental Figure 2: Example of duplicate individual"
+---
+
+Duplicate recordings of individuals are a possible phenomena as the UVP5 descend through the water column. These are labels in processing as 'tnd' - technically not duplicate because the are captured in different pictures. A true duplicate would be if an individual was segmented into two pieces in zooprocess.
+
+![Supplemental Figure 2. Instance of a multiple-recorded copepod from an individual cast](./supp_analysis_02_files/Supp_Fig_02_export-pdf_dup-example-1.png)

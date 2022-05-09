@@ -43,7 +43,7 @@ vol_plot <- ggplot()+
   geom_line(data = avg_vol,
             aes(x = depth, y = vol_sampled),
             col = 'black', size = 2)+
-  geom_hline(yintercept = floor(1/.035)*1.1, col = 'red')+
+  geom_hline(yintercept = floor(1/0.0311)*1.1, col = 'red')+
   scale_x_reverse()+
   coord_flip()+
   theme_bw()+

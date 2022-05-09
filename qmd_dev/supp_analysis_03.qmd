@@ -1,0 +1,22 @@
+---
+title: 'Suppelemental Figure 3: Impact of multiple-imaged plankton'
+---
+
+To assess the impact of duplicate images, for all casts in AE1912, the most abundant plankton taxonomic groups (Rhizaria, *Trichodesmium*, Copepods, *Eumalacostraca*) were all identified as either an independent observation or a "technically not duplicate" - a multiple instance of the same individual recorded in multiple pictures.
+
+The abundance of these taxa were then calculated with two possible methods:
+1- All technically not duplicate images were counted as independed observations. Density was then calculated using the volume sampled as determined by the UVP
+2- Technically not duplicate images were removed. When 
+
+Method 1 is displayed by black points while Method 2 is displayed by blue points.
+
+```{r set up, warning = F, echo=FALSE}
+rm(list = ls())
+library(ggplot2)
+library(ggalt)
+dup_plots <- readRDS('../Output/supp_fig_03_dup-plots.rds')
+```
+
+```{r plots, warning = F, fig.cap='Sup Fig 3. Imact of multiple-imaged organisms on density estimates for specific taxa on individual casts in 20m bins. Black points show inclusion of multiples, blue points show exclusion.'}
+print(dup_plots)
+```
