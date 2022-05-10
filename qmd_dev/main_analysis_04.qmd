@@ -4,7 +4,7 @@ title: "Regression of density estimates"
 
 To compare similarity of UVP and MOCNESS estimates of taxa abundance, linear regressions were constructed to compare estimates between the devices of similarly sized taxa (above 0.934mm) in matching depth bins.
 
-UVP Estimates were calculated following both a pooled-cast approach
+UVP Estimates were calculated following both a pooled-cast approach and an average-cast approach. See methods for calculation [here.](./main_analysis_03.html) 
 
 Below are plotted results. Grey lines indicate the 1:1 line (if estimates were equal between the devices). Black lines indicate the line of best fit.
 
@@ -17,7 +17,7 @@ reg_plots <- readRDS('../Output/main_fig_04_regression-plots.rds')
 reg_dat <- readRDS('../Output/data_04_regressions-models.rds')
 ```
 
-```{r Plotting, warning = F,echo = F, message=F, fig.height=10, fig.width=8, echo = F, fig.cap='Regressions between UVP-derived estimates of abundance (num/ square meter) and MOCNESS estimates. Left Column displays pooled-cast method and righ column displays avgerage-cast method. Grey line indicates 1:1 line, Black line is line of best fit.'}
+```{r Plotting, warning = F,echo = F, message=F, fig.height=10, fig.width=8, echo = F, fig.cap='Regressions between UVP-derived estimates of abundance (num/ cubic meter) and MOCNESS estimates. Left Column displays pooled-cast method and righ column displays avgerage-cast method. Grey line indicates 1:1 line, Black line is line of best fit.'}
 #| Column: body-outset
 plot_theme <- theme(legend.position = 'none')
 plot_grid(reg_plots$pooled$Annelida+plot_theme, reg_plots$avged$Annelida+plot_theme,

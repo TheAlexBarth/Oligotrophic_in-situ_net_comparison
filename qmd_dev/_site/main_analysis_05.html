@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="quarto-0.9.80">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Oligotrophic Mesozooplankton Methods Comparison - Oligotrophic Comparison of Net-Based &amp; In-situ Items</title>
+  <title>Oligotrophic Mesozooplankton Methods Comparison - Depth Integrated Abundance</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -114,6 +114,15 @@
       "search-submit-button-title": "Submit"
     }
   }</script>
+  <script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+  <link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+  <script src="site_libs/datatables-binding-0.22/datatables.js"></script>
+  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <link href="site_libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet">
+  <link href="site_libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet">
+  <script src="site_libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script>
+  <link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
+  <script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -133,7 +142,7 @@
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">Home</a>
+    <a class="nav-link" href="./index.html">Home</a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-main-analyses" role="button" data-bs-toggle="dropdown" aria-expanded="false">Main Analyses</a>
@@ -159,15 +168,15 @@
  <span class="dropdown-text">Depth Integrated Abundance</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./main_analysis_06.html">
+    <a class="dropdown-item" href="./main_analysis_06.qmd">
  <span class="dropdown-text">Select Biomass Profiles</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./main_analysis_07.html">
+    <a class="dropdown-item" href="./main_analysis_07.qmd">
  <span class="dropdown-text">Biomass Regressions</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./main_analysis_08.html">
+    <a class="dropdown-item" href="./main_analysis_08.qmd">
  <span class="dropdown-text">Depth Integrated Biomass</span></a>
   </li>  
     </ul>
@@ -227,61 +236,107 @@
 <!-- main -->
 <main class="content" id="quarto-document-content">
 <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title-block"><div><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-<div class="quarto-title"><h1 class="title">Oligotrophic Comparison of Net-Based &amp; In-situ Items</h1></div></header>
-<p>Supplemental information for “Comparison of an in-situ imaging device and net-based method to study mesozooplankton communities in an oligotrophic system.”</p>
-<p>This study analyzed abundance and biomass estimates collected through two methods: A traditional depth-specific net system (MOCNESS) and a novel <em>in-situ</em> imaging tool, the UVP.</p>
-<p>Here, you can look at our main analyses as well as supplemental information and figures. Data are available on the <a href="https://github.com/TheAlexBarth/Oligotrophic_in%20situ_net_comparison">project’s github repo</a> along with r scripts for processing the data. Much of the data analysis relies on Alex Barth’s <a href="https://github.com/TheAlexBarth/EcotaxaTools">EcotaxaTools Package</a> which is currently not yet available on CRAN. Additionally, all data on the repo are in .rds format to allow for storage of complex objects. If you would like data for this project in either csv or json format, send an email to Alex Barth (AB93@email.sc.edu).</p>
-<section id="main-analyses" class="level3">
-<h3 class="anchored" data-anchor-id="main-analyses">Main Analyses:</h3>
-<ul>
-<li><a href="./main_analysis_01.html">1: Size sampling distributions by different tools</a></li>
-<li><a href="./main_analysis_02.html">2: Comparison of proportional representation of taxa by different sampling mechanisms</a></li>
-<li><a href="./main_analysis_03.html">3: Density profiles of select taxa estimated by the two different tools</a></li>
-</ul>
-</section>
-<section id="supplemental-analyses-figures" class="level3">
-<h3 class="anchored" data-anchor-id="supplemental-analyses-figures">Supplemental Analyses &amp; Figures</h3>
-<ul>
-<li><a href="./supp_analysis_01.html">Supplemental Figure 1 - Descent Rate &amp; Volume Sampled</a></li>
-<li><a href="./supp_analysis_02.html">Supplemental Figure 2 - An example of a multiple-imaged individual</a></li>
-<li><a href="./supp_analysis_03.html">Supplemental Figure 3 - Impact of multiple-imaged individuals on density estimates</a></li>
-<li><a href="./supp_analysis_04.html">Supplemental Figure 4 - Bin-Size Investigation</a></li>
-<li><a href="./supp_analysis_05.html">Supplemental Figure 5 - Full Size Range MOCNESS Compared to UVP</a></li>
-<li><a href="./supp_analysis_06.html">Supplemental Figure 6 - All Density Profiles</a></li>
-<li><a href="./supp_analysis_07.html">Supplemental Figure 7 - All Biomass Profiles</a></li>
-</ul>
+<div class="quarto-title-block"><div><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+<div class="quarto-title"><h1 class="title">Depth Integrated Abundance</h1></div></header>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cowplot)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>test_res <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">'../Output/data_05_intg_test-res.rds'</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>intg_plots <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">'../Output/main_fig_05_integration-plots.rds'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-column="body-outset">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>plot_themes <span class="ot">&lt;-</span> <span class="fu">theme</span>(<span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>, <span class="at">face =</span> <span class="st">'bold'</span>), </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>                     <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>, <span class="at">face =</span> <span class="st">'bold'</span>),</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                     <span class="at">axis.text.y =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">8</span>),</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>                     <span class="at">legend.position =</span> <span class="st">'none'</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_grid</span>(intg_plots<span class="sc">$</span>pooled <span class="sc">+</span> plot_themes,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>          intg_plots<span class="sc">$</span>avged <span class="sc">+</span> plot_themes,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>          <span class="fu">get_legend</span>((intg_plots<span class="sc">$</span>avged <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">'bottom'</span>,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>                                               <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>)))),</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>          <span class="at">rel_heights =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,.<span class="dv">2</span>),</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>          <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"A"</span>,<span class="st">"B"</span>,<span class="st">""</span>),</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>          <span class="at">label_x =</span> .<span class="dv">95</span>,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>          <span class="at">label_y =</span> .<span class="dv">95</span>,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>          <span class="at">label_size =</span> <span class="dv">12</span>,</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>          <span class="at">ncol=</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="main_analysis_05_files/figure-html/Plots-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Depth integrated abundances for taxa cacluled from MOCNESS (displayed as bars) and UVP (displayed as points). (A). Pooled-cast method for UVP estimates. (B): Average-cast method for UVP estimates with standard deviation shown. There are no significant differences on pair-wise comparisons for casts within taxa between UVP-to-MOCNESS or Pooled-cast to average-cast UVP estimates. (Mann-Whitney Test).</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>In general, the UVP estimates are lower than the MOCNESS estimates. However, there were no significant differences in pair-wise comparisons for any taxa between Pooled-cast UVP to MOCNESS estimates, Average-cast UVP to MOCNESS estimates, nor Pooled-cast to average-cast UVP estimates.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>pool_to_moc <span class="ot">&lt;-</span> <span class="fu">sapply</span>(test_res<span class="sc">$</span>pool_moc, <span class="st">`</span><span class="at">[[</span><span class="st">`</span>, <span class="st">'p.value'</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>avg_to_moc <span class="ot">&lt;-</span> <span class="fu">sapply</span>(test_res<span class="sc">$</span>avg_moc, <span class="st">`</span><span class="at">[[</span><span class="st">`</span>,<span class="st">'p.value'</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>avg_to_pool <span class="ot">&lt;-</span> <span class="fu">sapply</span>(test_res<span class="sc">$</span>avg_pool, <span class="st">`</span><span class="at">[[</span><span class="st">`</span>, <span class="st">'p.value'</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>stat_res <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">rbind</span>(pool_to_moc,avg_to_moc,avg_to_pool))</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>DT<span class="sc">::</span><span class="fu">datatable</span>(stat_res, <span class="at">caption =</span> <span class="st">'p-values from pairwise Mann-Whitney test to compare depth-integrated abundance between Pooled UVP, Averaged UVP, and MOCNESS collected taxa'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="htmlwidget-499573667c6ef7b11d72" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-499573667c6ef7b11d72">{"x":{"filter":"none","vertical":false,"caption":"<caption>p-values from pairwise Mann-Whitney test to compare depth-integrated abundance between Pooled UVP, Averaged UVP, and MOCNESS collected taxa<\/caption>","data":[["pool_to_moc","avg_to_moc","avg_to_pool"],[0.125,0.0625,0.125],[0.0625,0.0625,0.8125],[0.0625,0.0625,0.625],[0.3125,0.8125,0.0625],[0.125,0.125,0.625]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Annelida<\/th>\n      <th>Chaetognatha<\/th>\n      <th>Copepoda<\/th>\n      <th>Ostra/Clado<\/th>\n      <th>Shrimp-like<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
 
 
 <!-- -->
 <div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title anchored" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Oligotrophic Comparison of Net-Based &amp; In-situ Items"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>Supplemental information for "Comparison of an in-situ imaging device and net-based method to study mesozooplankton communities in an oligotrophic system."</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>This study analyzed abundance and biomass estimates collected through two methods: A traditional depth-specific net system (MOCNESS) and a novel *in-situ* imaging tool, the UVP.</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Here, you can look at our main analyses as well as supplemental information and figures. Data are available on the <span class="co">[</span><span class="ot">project's github repo</span><span class="co">](https://github.com/TheAlexBarth/Oligotrophic_in%20situ_net_comparison)</span> along with r scripts for processing the data. Much of the data analysis relies on Alex Barth's <span class="co">[</span><span class="ot">EcotaxaTools Package</span><span class="co">](https://github.com/TheAlexBarth/EcotaxaTools)</span> which is currently not yet available on CRAN. Additionally, all data on the repo are in .rds format to allow for storage of complex objects. If you would like data for this project in either csv or json format, send an email to Alex Barth (AB93\@email.sc.edu).</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">### Main Analyses:</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">1: Size sampling distributions by different tools</span><span class="co">](./main_analysis_01.html)</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">2: Comparison of proportional representation of taxa by different sampling mechanisms</span><span class="co">](./main_analysis_02.html)</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">3: Density profiles of select taxa estimated by the two different tools</span><span class="co">](./main_analysis_03.html)</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">### Supplemental Analyses &amp; Figures</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Supplemental Figure 1 - Descent Rate &amp; Volume Sampled</span><span class="co">](./supp_analysis_01.html)</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Supplemental Figure 2 - An example of a multiple-imaged individual</span><span class="co">](./supp_analysis_02.html)</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Supplemental Figure 3 - Impact of multiple-imaged individuals on density estimates</span><span class="co">](./supp_analysis_03.html)</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Supplemental Figure 4 - Bin-Size Investigation</span><span class="co">](./supp_analysis_04.html)</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Supplemental Figure 5 - Full Size Range MOCNESS Compared to UVP</span><span class="co">](./supp_analysis_05.html)</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Supplemental Figure 6 - All Density Profiles</span><span class="co">](./supp_analysis_06.html)</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Supplemental Figure 7 - All Biomass Profiles</span><span class="co">](./supp_analysis_07.html)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Depth Integrated Abundance"</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="in">```{r Set up, message=FALSE, warning=F}</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cowplot)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>test_res <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">'../Output/data_05_intg_test-res.rds'</span>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>intg_plots <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">'../Output/main_fig_05_integration-plots.rds'</span>)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="in">```{r Plots, message=F, fig.height=7, fig.cap='Depth integrated abundances for taxa cacluled from MOCNESS (displayed as bars) and UVP (displayed as points). (A). Pooled-cast method for UVP estimates. (B): Average-cast method for UVP estimates with standard deviation shown. There are no significant differences on pair-wise comparisons for casts within taxa between UVP-to-MOCNESS or Pooled-cast to average-cast UVP estimates. (Mann-Whitney Test).'}</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co">#| Column: body-outset</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>plot_themes <span class="ot">&lt;-</span> <span class="fu">theme</span>(<span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>, <span class="at">face =</span> <span class="st">'bold'</span>), </span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>                     <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>, <span class="at">face =</span> <span class="st">'bold'</span>),</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>                     <span class="at">axis.text.y =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">8</span>),</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>                     <span class="at">legend.position =</span> <span class="st">'none'</span>)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_grid</span>(intg_plots<span class="sc">$</span>pooled <span class="sc">+</span> plot_themes,</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>          intg_plots<span class="sc">$</span>avged <span class="sc">+</span> plot_themes,</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>          <span class="fu">get_legend</span>((intg_plots<span class="sc">$</span>avged <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">'bottom'</span>,</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>                                               <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>)))),</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>          <span class="at">rel_heights =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,.<span class="dv">2</span>),</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>          <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"A"</span>,<span class="st">"B"</span>,<span class="st">""</span>),</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>          <span class="at">label_x =</span> .<span class="dv">95</span>,</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>          <span class="at">label_y =</span> .<span class="dv">95</span>,</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>          <span class="at">label_size =</span> <span class="dv">12</span>,</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>          <span class="at">ncol=</span> <span class="dv">1</span>)</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>In general, the UVP estimates are lower than the MOCNESS estimates. However, there were no significant differences in pair-wise comparisons for any taxa between Pooled-cast UVP to MOCNESS estimates, Average-cast UVP to MOCNESS estimates, nor Pooled-cast to average-cast UVP estimates.</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a><span class="in">```{r Stats Summary}</span></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>pool_to_moc <span class="ot">&lt;-</span> <span class="fu">sapply</span>(test_res<span class="sc">$</span>pool_moc, <span class="st">`</span><span class="at">[[</span><span class="st">`</span>, <span class="st">'p.value'</span>)</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>avg_to_moc <span class="ot">&lt;-</span> <span class="fu">sapply</span>(test_res<span class="sc">$</span>avg_moc, <span class="st">`</span><span class="at">[[</span><span class="st">`</span>,<span class="st">'p.value'</span>)</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>avg_to_pool <span class="ot">&lt;-</span> <span class="fu">sapply</span>(test_res<span class="sc">$</span>avg_pool, <span class="st">`</span><span class="at">[[</span><span class="st">`</span>, <span class="st">'p.value'</span>)</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>stat_res <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">rbind</span>(pool_to_moc,avg_to_moc,avg_to_pool))</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>DT<span class="sc">::</span><span class="fu">datatable</span>(stat_res, <span class="at">caption =</span> <span class="st">'p-values from pairwise Mann-Whitney test to compare depth-integrated abundance between Pooled UVP, Averaged UVP, and MOCNESS collected taxa'</span>)</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
-</section>
 </main> <!-- /main -->
 <script type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

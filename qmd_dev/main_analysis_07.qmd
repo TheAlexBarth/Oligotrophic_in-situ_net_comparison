@@ -1,0 +1,55 @@
+---
+title: "Regression of Biomass Estimates"
+---
+
+To compare similarity of UVP and MOCNESS estimates of taxa biomass, linear regressions were constructed to compare estimates between the devices of similarly sized taxa (above 0.934mm) in matching depth bins.
+
+UVP Estimates were calculated following both a pooled-cast approach and an average-cast approach. See methods for calculation [here.](./main_analysis_06.html) 
+
+Below are plotted results. Grey lines indicate the 1:1 line (if estimates were equal between the devices). Black lines indicate the line of best fit.
+
+```{r Set-up, echo = F, warning = F}
+rm(list = ls())
+library(ggplot2)
+library(EcotaxaTools)
+library(cowplot)
+reg_plots <- readRDS('../Output/main_fig_07_biomass-regression-plots.rds')
+reg_dat <- readRDS('../Output/data_07_biomass-regressions-models.rds')
+```
+
+```{r Plotting, warning = F,echo = F, message=F, fig.height=10, fig.width=8, echo = F, fig.cap='Regressions between UVP-derived estimates of biomass (mg/ cubic meter) and MOCNESS estimates. Left Column displays pooled-cast method and righ column displays avgerage-cast method. Grey line indicates 1:1 line, Black line is line of best fit.'}
+#| Column: body-outset
+plot_theme <- theme(legend.position = 'none')
+plot_grid(reg_plots$pooled$Chaetognatha+plot_theme, reg_plots$avged$Chaetognatha+plot_theme,
+          reg_plots$pooled$Copepoda+plot_theme, reg_plots$avged$Copepoda+plot_theme,
+          reg_plots$pooled$`Ostra/Clado`+plot_theme, reg_plots$avged$`Ostra/Clado`+plot_theme,
+          reg_plots$pooled$`Shrimp-like`+plot_theme, reg_plots$avged$`Shrimp-like`+ plot_theme,
+          get_legend(reg_plots$avged$`Shrimp-like` + theme(legend.position = 'bottom')),
+          rel_heights = c(rep(1,8),.2),
+          labels = c(LETTERS[1:8],""),
+          label_x = .95,
+          label_y = 1,
+          label_size = 12,
+          ncol = 2)
+```
+
+***
+Similar to the [abundance bin-specific regressions](./main_analysis_04.qmd), the biomass in UVP bins was lower from UVP methods. However, there is a strong significant relationship between copepod estimates from the UVP and those from the MOCNESS. This is true for both pooled-cast UVP and average-cast UVP methods. This is surprising knowing that the abundance estimates for the same copepods are much smaller. This indicates that for Copepods, the UVP is measuring large individuals, or more likely, that the conversion factor for image-to-biovolume, is inaccurate. While there is a signficant relationship, we do not recommend using this line for a conversion factor because we do know that the copepods measured by the UVP are not the same by abundance.
+***
+
+Regression summaries can be found below:
+```{R Regression Summaries}
+get_reg_sum <- function(reg) {
+  reg_summary <- summary(reg)
+  rvect <- reg_summary$coefficients[2,-3]
+  rvect[4] <- reg_summary$r.squared
+  names(rvect) <- c('Slope_Estimate','Std.Error','p-value','r.squared')
+  return(rvect)
+}
+pool_sum <- lapply(reg_dat$pooled, get_reg_sum) |> list_to_tib('Taxa')
+avg_sum <- lapply(reg_dat$avged, get_reg_sum) |> list_to_tib('Taxa')
+#| Column: body-outset
+DT::datatable(pool_sum, class = 'hover', caption = 'Pooled-cast method UVP vs MOCNESS regression output')
+#| Column: body-outset
+DT::datatable(avg_sum, class = 'hover', caption = 'Average-cast method UVP vs MOCNESS regression output')
+```
