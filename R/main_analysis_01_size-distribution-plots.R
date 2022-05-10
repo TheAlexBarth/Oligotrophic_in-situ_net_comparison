@@ -108,7 +108,7 @@ for(i in 2:(length(comp_taxo)+1)) {
     labs(x = "ESD [mm]",
          fill = c('MOCNESS', "UVP"), 
          density = "", y = "Num. Individuals",
-         subtitle = comp_taxo[i-1])+
+         subtitle = comp_taxo[i])+
     theme_bw()+
     ab_theme+
     theme(legend.position = c(0.9,0.7),
@@ -116,15 +116,13 @@ for(i in 2:(length(comp_taxo)+1)) {
           legend.title = element_blank())
 }
 
-
-matched_size_list <- plot_grid(matched_size_plots[[1]],
+matched_size_list <- list(matched_size_plots[[1]],
                                   matched_size_plots[[2]],
                                   matched_size_plots[[3]],
                                   matched_size_plots[[4]],
                                   matched_size_plots[[5]],
-                                  matched_size_plots[[6]],
-                                  nrow = 6,ncol = 1,
-                                  align = 'vh')
+                                  matched_size_plots[[6]])
+names(matched_size_list) <- comp_taxo
 
 ###
 # Save plots ----------------------------
@@ -136,4 +134,5 @@ saveRDS(list(
   moc_trim = moc_comp,
   uvp = uvp_comp
 ), './Output/data_01_size-range-dfs.rds')
+save(moc_comp, uvp_comp, comp_taxo, file = './Output/data_01_plotting-needs.rda')
 

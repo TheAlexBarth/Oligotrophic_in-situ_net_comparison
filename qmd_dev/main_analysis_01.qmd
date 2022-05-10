@@ -7,17 +7,27 @@ rm(list = ls())
 library(ggplot2)
 library(EcotaxaTools)
 library(DT)
+library(cowplot)
 dat_list <- readRDS('../Output/data_01_size-range-dfs.rds')
 plot_list <- readRDS('../Output/main_fig_01_matched-size-distribution.rds')
+load('../Output/data_01_plotting-needs.rda')
 ```
 
-The MOCNESS and UVP inherently sample different size ranges. The MOCNESS was equipped with 153 micron mesh while the UVP only saves particles above 600 microns. To compare the effectiveness of the two devices, we analyzed MOCNESS images equal to or larger to what we are able to measure with the UVP. This comparison focuses only on taxa which made up a [substantial](./main_analysis_02.html) portion of taxa sampled by both instruments. It is important to note that although UVP is set to save particle images above 600 microns, for comparable sized taxa, larger sizes are needed to accurately distinguish plankton from particles. The smallest recorded comparable organism was a 934 micron Shrimp-like crustacean. As such, this was the minimum size for inclusion for any MOCNESS-collected plankton in subsequent analyses.
+The MOCNESS and UVP inherently sample different size ranges. The MOCNESS was equipped with 153 micron mesh while the UVP only saves particles above 600 microns. To compare the effectiveness of the two devices, we analyzed MOCNESS images equal to or larger to what we are able to measure with the UVP. This comparison focuses only on taxa which made up a [substantial](./main_analysis_02.html) portion of taxa sampled by both instruments. It is important to note that although UVP is set to save particle images above 600 microns, for comparable sized taxa, larger sizes are needed to accurately distinguish plankton from particles. The smallest recorded comparable organism was a 934 micron Shrimp-like crustacean. As such, this was the minimum size for inclusion for any MOCNESS-collected plankton in subsequent analyses. The full MOCNESS size range extends to much [smaller organisms](./supp_analysis_05.html)
 
 Here we compare All taxa, Annelids, Chaetognaths, Copepods, Shrimp-like Crustaceans, and Ostracod/Cladoceans.
 
-```{r Figure 1, fig.height=10, out.width='100%',fig.cap= 'Size distributions for select taxa.', dpi= 300}
+```{r Figure 1, fig.height=10, out.width='100%',fig.cap= 'Size distributions for select taxa. MOCNESS individuals below 0.934mm were excluded', dpi= 300, message = F, warning = F}
 #| column: body-outset
-print(plot_list)
+grid_theme <- theme(legend.position = 'none')
+plot_grid(plot_list[[1]]+grid_theme+labs(subtitle = 'All-living'),
+          plot_list[[2]]+grid_theme+labs(subtitle = 'Annelid'),
+          plot_list[[3]]+grid_theme+labs(subtitle = 'Chaetognath'),
+          plot_list[[4]]+grid_theme+labs(subtitle = 'Copepod'),
+          plot_list[[5]]+grid_theme+labs(subtitle = 'Shrimp-like'),
+          plot_list[[6]]+labs(subtitle = 'Ostra/Clado'),
+          align = 'vh',
+          ncol = 1)
 ```
 ------------------------------------------------------------------------
 
