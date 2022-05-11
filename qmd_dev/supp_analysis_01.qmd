@@ -17,6 +17,7 @@ dr_plot <- readRDS('../Output/supp_fig_01_descent-rates.rds')
 vol_plot <- readRDS('../Output/supp_fig_01_vol-sampled.rds')
 
 dr_dat <- readRDS('../Output/data_supp_01_descent-averages.rds')
+vol_dat <- readRDS('../Output/data_supp_01_voldata.rds')
 ```
 
 

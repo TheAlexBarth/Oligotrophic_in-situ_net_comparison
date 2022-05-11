@@ -87,7 +87,7 @@ for(l in 1:length(bin_vol)){
                                   depth_breaks = seq(0, max(ecopar_vol[[l]]$depth),20))
   names(bin_vol[[l]]) <- c("depth","vol_sampled")
   bin_vol_wo[[l]] <- bin_vol[[l]]
-  bin_vol_wo[[l]]$vol_sampled[bin_vol_wo[[l]]$vol_sampled > 35.36977*20] <- 35.36977*20
+  bin_vol_wo[[l]]$vol_sampled[bin_vol_wo[[l]]$vol_sampled > (1/0.0311)*20] <- (1/0.0311)*20
 }
 
 ####
