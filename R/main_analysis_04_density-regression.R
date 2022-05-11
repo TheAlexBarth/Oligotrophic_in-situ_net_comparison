@@ -82,7 +82,7 @@ for(i in 1:length(taxa_names)) {
                 size = 1, se = F, col = 'black')+
     scale_y_continuous(expand = expansion(c(0,.1)))+
     scale_x_continuous(expand = expansion(c(0,0.1)))+
-    labs(x = "MOCNESS Density",y = "UVP Density", subtitle = taxa,
+    labs(x = bquote(MOCNESS~'[#indv.'~m^-3*']'),y = bquote(UVP~'[#indv.'~m^-3*']'), subtitle = taxa,
          col = '')+
     scale_color_manual(values = gg_cbb_col(length(unique(pooled_all$group))))+
     theme_bw()+
@@ -100,7 +100,7 @@ for(i in 1:length(taxa_names)) {
                 size = 1, se = F, col = 'black')+
     scale_y_continuous(expand = expansion(c(0,.1)))+
     scale_x_continuous(expand = expansion(c(0,0.1)))+
-    labs(x = "MOCNESS Density",y = "UVP Density", subtitle = taxa)+
+    labs(x = bquote(MOCNESS~'[#indv.'~m^-3*']'),y = bquote(UVP~'[#indv.'~m^-3*']'), subtitle = taxa)+
     scale_color_manual(values = gg_cbb_col(length(unique(avg_all$group))))+
     theme_bw()+
     ab_theme+

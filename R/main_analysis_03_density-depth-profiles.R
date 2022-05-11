@@ -52,7 +52,7 @@ for(i in 1:length(profile_names)) {
       scale_fill_manual(values = gg_cbb_col(2), breaks = c('MOCNESS', 'Pooled-Cast UVP'))+
       scale_x_reverse()+
       coord_flip()+
-      labs(x = 'Depth [m]', y = paste0(taxa," [per cubic m]"),
+      labs(x = 'Depth [m]', y = bquote(.(taxa) ~ '[#indv.'~m^-3*']'),
            subtitle = profile_names[i], fill = "", color = "")+
       theme_bw()+
       theme(legend.position = c(0.9,0.1), legend.background = element_blank())

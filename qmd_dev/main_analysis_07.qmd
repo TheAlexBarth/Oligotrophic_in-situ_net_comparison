@@ -17,7 +17,7 @@ reg_plots <- readRDS('../Output/main_fig_07_biomass-regression-plots.rds')
 reg_dat <- readRDS('../Output/data_07_biomass-regressions-models.rds')
 ```
 
-```{r Plotting, warning = F,echo = F, message=F, fig.height=10, fig.width=8, echo = F, fig.cap='Regressions between UVP-derived estimates of biomass (mg/ cubic meter) and MOCNESS estimates. Left Column displays pooled-cast method and righ column displays avgerage-cast method. Grey line indicates 1:1 line, Black line is line of best fit.'}
+```{r Plotting, warning = F,echo = F, message=F, fig.height=10, fig.width=8, echo = F, fig.cap='Regressions between UVP-derived estimates of biomass (mg/ cubic meter) and MOCNESS estimates. Left Column displays pooled-cast method and righ column displays avgerage-cast method. Grey line indicates 1:1 line, Black line is line of best fit.',dip = 300}
 #| Column: body-outset
 plot_theme <- theme(legend.position = 'none')
 plot_grid(reg_plots$pooled$Chaetognatha+plot_theme, reg_plots$avged$Chaetognatha+plot_theme,

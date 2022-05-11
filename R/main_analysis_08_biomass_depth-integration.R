@@ -47,7 +47,7 @@ avg_intg_plot <- ggplot() +
                     ymax = mean_conc_m2 + sd_conc_m2, col = Cruise),
                 position = position_dodge(width = .9),
                 size = 1, width = .5)+
-  labs(x = "", y = "Integrated Biomass [mg per square meter]",
+  labs(x = "", y =  bquote(Integrated~Biomass~'[mg'~m^-2*']'),
        fill = "", col = "")+
   scale_color_manual(values = gg_cbb_col(7)[-c(1:2)])+
   scale_fill_manual(values = gg_cbb_col(7)[-c(1:2)])+
@@ -65,7 +65,7 @@ pool_intg_plot <- ggplot()+
              aes(x = taxa, y = intg, col = Cruise),
              position = position_dodge(width = .9),
              size = 5, shape = 18)+
-  labs(x = "", y = "Integrated Biomass [mg per square meter]",
+  labs(x = "",  y= bquote(Integrated~Biomass~'[mg'~m^-2*']'),
        fill = "", col = "")+
   scale_color_manual(values = gg_cbb_col(7)[-c(1:2)])+
   scale_fill_manual(values = gg_cbb_col(7)[-c(1:2)])+

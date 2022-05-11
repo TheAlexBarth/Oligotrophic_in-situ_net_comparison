@@ -36,7 +36,6 @@ The data folder hosts .rds objects. These are r objects which can be loaded. Raw
 
 These are plots and summary data produced by analysis (either supp or main) scripts.
 
-***
+------------------------------------------------------------------------
 
 Note that there are extra files in this directory depending on where it was accessed. The github repo will have all versions but I'm also using this readme for supplemental information zip file. So there are extra documents which I don't descript fully in this readme.
-

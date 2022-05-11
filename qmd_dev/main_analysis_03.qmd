@@ -6,7 +6,7 @@ Density profiles of comparable taxa are shown when measured by the MOCNESS/ZOOSC
 
 
 
-```{r}
+```{r warning=F, message=F}
 rm(list = ls())
 library(cowplot)
 library(ggplot2)
@@ -14,7 +14,7 @@ plot_list <- readRDS('../Output/main_fig_03_profile-density-comparison.rds')
 ```
 
 
-```{r All-Plots, fig.height=9,fig.width=9,fig.cap='Select taxa depth profiles. Pooled-UVP cast estimates are shown as barplots. Averaged-UVP casts estimates are shown by points with standard deviation shown.'}
+```{r All-Plots, fig.height=9,fig.width=9,fig.cap='Select taxa depth profiles. Pooled-UVP cast estimates are shown as barplots. Averaged-UVP casts estimates are shown by points with standard deviation shown.', dpi = 500}
 #| column: body-outset
 
 grid_theme <- theme(legend.position = 'none')

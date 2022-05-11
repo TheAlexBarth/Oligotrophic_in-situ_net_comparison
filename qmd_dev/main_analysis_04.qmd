@@ -25,7 +25,7 @@ plot_grid(reg_plots$pooled$Annelida+plot_theme, reg_plots$avged$Annelida+plot_th
           reg_plots$pooled$Copepoda+plot_theme, reg_plots$avged$Copepoda+plot_theme,
           reg_plots$pooled$`Ostra/Clado`+plot_theme, reg_plots$avged$`Ostra/Clado`+plot_theme,
           reg_plots$pooled$`Shrimp-like`+plot_theme, reg_plots$avged$`Shrimp-like`+ plot_theme,
-          get_legend(reg_plots$avged$`Shrimp-like` + theme(legend.position = 'right')),
+          get_legend(reg_plots$avged$`Shrimp-like` + theme(legend.position = 'bottom')),
           ncol = 2)
 ```
 

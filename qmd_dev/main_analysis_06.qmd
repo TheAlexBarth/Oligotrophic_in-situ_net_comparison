@@ -8,7 +8,7 @@ UVP estimates were calculated two ways. In one method, similar UVP casts are poo
 
 Biomass was calculuated following [Maas et al. 2021](https://academic.oup.com/plankt/article/43/3/475/6277440) for Annelids, Chaetognaths, Copepods, and Shrimp-like crustaceans.
 
-```{r}
+```{r warning = F, message=F}
 rm(list = ls())
 library(cowplot)
 library(ggplot2)
@@ -16,7 +16,7 @@ plot_list <- readRDS('../Output/main_fig_06_profile-biomass-comparison.rds')
 ```
 
 
-```{r All-Plots, fig.height=6,fig.width=6,fig.cap='Select taxa depth profiles. Pooled-UVP cast estimates are shown as barplots. Averaged-UVP casts estimates are shown by points with standard deviation shown.'}
+```{r All-Plots, fig.height=6,fig.width=6,fig.cap='Select taxa depth profiles. Pooled-UVP cast estimates are shown as barplots. Averaged-UVP casts estimates are shown by points with standard deviation shown.',dpi = 300,message=F,warning=F}
 #| column: body-outset
 
 grid_theme <- theme(legend.position = 'none')

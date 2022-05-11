@@ -13,6 +13,11 @@ Here, you can look at our main analyses as well as supplemental information and 
 -   [1: Size sampling distributions by different tools](./main_analysis_01.html)
 -   [2: Comparison of proportional representation of taxa by different sampling mechanisms](./main_analysis_02.html)
 -   [3: Density profiles of select taxa estimated by the two different tools](./main_analysis_03.html)
+-   [4: Regression between bin-matched UVP and MOCNESS density estimates](./main_analysis_04.html)
+-   [5: Depth Integrated Abundance](./main_analysis_05.html)
+-   [6: Biomass profiles estimated by the two different tools](./main_analysis_06)
+-   [7: Regression between bin-matched UVP and MOCNESS biomass estimates](./main_analysis_07.html)
+-   [8: Depth Integrated Biomass](./main_analysis_08.html)
 
 ### Supplemental Analyses & Figures
 
