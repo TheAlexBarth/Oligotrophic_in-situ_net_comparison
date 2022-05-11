@@ -21,8 +21,8 @@ Here we compare All taxa, Annelids, Chaetognaths, Copepods, Shrimp-like Crustace
 #| column: body-outset
 grid_theme <- theme(legend.position = 'none')
 plot_grid(plot_list[[1]]+grid_theme+labs(subtitle = 'All-living'),
-          plot_list[[2]]+grid_theme+labs(subtitle = 'Annelid'),
-          plot_list[[3]]+grid_theme+labs(subtitle = 'Chaetognath'),
+          plot_list[[2]]+grid_theme+labs(subtitle = 'Chaetognath'),
+          plot_list[[3]]+grid_theme+labs(subtitle = 'Annelid'),
           plot_list[[4]]+grid_theme+labs(subtitle = 'Copepod'),
           plot_list[[5]]+grid_theme+labs(subtitle = 'Shrimp-like'),
           plot_list[[6]]+labs(subtitle = 'Ostra/Clado'),

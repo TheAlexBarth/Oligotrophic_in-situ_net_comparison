@@ -85,9 +85,9 @@ wilcox_tester <- function(taxa, df1, df2) {
   tdf <- merge(df1, df2, by = c('Cruise', 'taxa'))
   tdf <- tdf[tdf$taxa == taxa,]
   if(ncol(tdf) == 4){
-    test_res <- wilcox.test(tdf$intg.x, tdf$intg.y, paired = T)
+    test_res <- wilcox.test(tdf$intg.x, tdf$intg.y, paired = T, exact = T)
   } else if(ncol(tdf) == 5) {
-    test_res <- wilcox.test(tdf$mean_conc_m2, tdf$intg, paired = T)
+    test_res <- wilcox.test(tdf$mean_conc_m2, tdf$intg, paired = T, exact = T)
   } else {
     stop('Something Wrong')
   }
@@ -100,6 +100,25 @@ pool_moc <- lapply(taxa_names, wilcox_tester, intg_dat$pool_uvp, intg_dat$moc)
 names(pool_moc) <- taxa_names
 avg_pool <- lapply(taxa_names, wilcox_tester, intg_dat$avg_uvp, intg_dat$pool_uvp)
 names(avg_pool) <- taxa_names
+
+
+# |- Wilcox paired test ignoring taxa ----------------------------------------
+all_wilcox_test <- function(df1, df2) {
+  tdf <- merge(df1, df2, by = c('Cruise', 'taxa'))
+  if(ncol(tdf) == 4){
+    test_res <- wilcox.test(tdf$intg.x, tdf$intg.y, paired = T)
+  } else if(ncol(tdf) == 5) {
+    test_res <- wilcox.test(tdf$mean_conc_m2, tdf$intg, paired = T)
+  } else {
+    stop('Something Wrong')
+  }
+  return(test_res)
+}
+
+all_avg_moc <- all_wilcox_test(intg_dat$avg_uvp,intg_dat$moc)
+all_pool_moc <- all_wilcox_test(intg_dat$pool_uvp, intg_dat$moc)
+all_avg_pool <- all_wilcox_test(intg_dat$avg_uvp, intg_dat$pool_uvp)
+
 ####
 # Save Data ------------------------------------------------------------------
 ####
