@@ -154,11 +154,11 @@ avg_casts <- function(casts, ecopartobj, db, ...) {
   conc_df <- do.call(rbind, conc_list)
   mean_df <- aggregate(list(mean = conc_df$conc_m3), by = list(db = conc_df$db,
                                                                taxa = conc_df$taxa),
-                       FUN = mean) |> add_zeros('mean')
+                       FUN = mean)
   
   sd_df <- aggregate(list(sd = conc_df$conc_m3), by = list(db = conc_df$db,
                                                            taxa = conc_df$taxa),
-                     FUN = sd, na.rm = T) |> add_zeros('sd')
+                     FUN = sd, na.rm = T)
   sd_df$sd[is.na(sd_df$sd)] <- 0
   return(structure(merge(mean_df, sd_df), class = c('data.frame', 'etx_conc_obj')))
 }
