@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="generator" content="quarto-0.9.80">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Oligotrophic Mesozooplankton Methods Comparison - Comparison of Size Distributions Sampled by two devices</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+
+  <script src="site_libs/quarto-nav/quarto-nav.js"></script>
+  <script src="site_libs/quarto-nav/headroom.min.js"></script>
+  <script src="site_libs/clipboard/clipboard.min.js"></script>
+  <meta name="quarto:offset" content="./">
+  <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+  <script src="site_libs/quarto-search/fuse.min.js"></script>
+  <script src="site_libs/quarto-search/quarto-search.js"></script>
+  <link href="./../Media/boat_favicon.png" rel="icon" type="image/png">
+  <script src="site_libs/quarto-html/quarto.js"></script>
+  <script src="site_libs/quarto-html/popper.min.js"></script>
+  <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+  <script src="site_libs/quarto-html/anchor.min.js"></script>
+  <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+  <link class="quarto-color-scheme" href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+  <link class="quarto-color-scheme quarto-color-alternate" rel="prefetch" href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css">
+  <script src="site_libs/bootstrap/bootstrap.min.js"></script>
+  <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+  <link class="quarto-color-scheme" href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link class="quarto-color-scheme quarto-color-alternate" rel="prefetch" href="site_libs/bootstrap/bootstrap-dark.min.css">
+  <script id="quarto-search-options" type="application/json">{
+    "location": "navbar",
+    "copy-button": false,
+    "collapse-after": 2,
+    "panel-placement": "end",
+    "type": "overlay",
+    "limit": 20,
+    "language": {
+      "search-no-results-text": "No results",
+      "search-matching-documents-text": "matching documents",
+      "search-copy-link-title": "Copy link to search",
+      "search-hide-matches-text": "Hide additional matches",
+      "search-more-match-text": "more match in this document",
+      "search-more-matches-text": "more matches in this document",
+      "search-clear-button-title": "Clear",
+      "search-detached-cancel-button-title": "Cancel",
+      "search-submit-button-title": "Submit"
+    }
+  }</script>
+  <script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+  <link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+  <script src="site_libs/datatables-binding-0.22/datatables.js"></script>
+  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <link href="site_libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet">
+  <link href="site_libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet">
+  <script src="site_libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script>
+  <link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
+  <script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="fullcontent">
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Oligotrophic Mesozooplankton Methods Comparison</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">Home</a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-main-analyses" role="button" data-bs-toggle="dropdown" aria-expanded="false">Main Analyses</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-main-analyses">    
+        <li>
+    <a class="dropdown-item" href="./main_analysis_01.html">
+ <span class="dropdown-text">Size Distributions</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./main_analysis_02.html">
+ <span class="dropdown-text">Relative Abundance</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./main_analysis_03.html">
+ <span class="dropdown-text">Select Density Profiles</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./main_analysis_04.html">
+ <span class="dropdown-text">Abundance Regressions</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./main_analysis_05.html">
+ <span class="dropdown-text">Depth Integrated Abundance</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./main_analysis_06.html">
+ <span class="dropdown-text">Select Biomass Profiles</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./main_analysis_07.html">
+ <span class="dropdown-text">Biomass Regressions</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./main_analysis_08.html">
+ <span class="dropdown-text">Depth Integrated Biomass</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-supplemental" role="button" data-bs-toggle="dropdown" aria-expanded="false">Supplemental</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-supplemental">    
+        <li>
+    <a class="dropdown-item" href="./supp_analysis_01.html">
+ <span class="dropdown-text">Descent Rate &amp; Volume Sampled</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./supp_analysis_02.html">
+ <span class="dropdown-text">Example of Multiple Individual</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./supp_analysis_03.html">
+ <span class="dropdown-text">Impact of Multiple-Individuals</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./supp_analysis_04.html">
+ <span class="dropdown-text">UVP bin-width investigation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./supp_analysis_05.html">
+ <span class="dropdown-text">Full Size Range Comparison</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./supp_analysis_06.html">
+ <span class="dropdown-text">All Density Profiles</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./supp_analysis_07.html">
+ <span class="dropdown-text">All Biomass Profiles</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/TheAlexBarth/Oligotrophic_in-situ_net_comparison"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title-block"><div><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+<div class="quarto-title"><h1 class="title">Comparison of Size Distributions Sampled by two devices</h1></div></header>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(EcotaxaTools)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DT)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cowplot)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>dat_list <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">'../Output/data_01_size-range-dfs.rds'</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>plot_list <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">'../Output/main_fig_01_matched-size-distribution.rds'</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">'../Output/data_01_plotting-needs.rda'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>The MOCNESS and UVP inherently sample different size ranges. The MOCNESS was equipped with 153 micron mesh while the UVP only saves particles above 600 microns. To compare the effectiveness of the two devices, we analyzed MOCNESS images equal to or larger to what we are able to measure with the UVP. This comparison focuses only on taxa which made up a <a href="./main_analysis_02.html">substantial</a> portion of taxa sampled by both instruments. It is important to note that although UVP is set to save particle images above 600 microns, for comparable sized taxa, larger sizes are needed to accurately distinguish plankton from particles. The smallest recorded comparable organism was a 934 micron Shrimp-like crustacean. As such, this was the minimum size for inclusion for any MOCNESS-collected plankton in subsequent analyses. The full MOCNESS size range extends to much <a href="./supp_analysis_05.html">smaller organisms</a></p>
+<p>Here we compare All taxa, Annelids, Chaetognaths, Copepods, Shrimp-like Crustaceans, and Ostracod/Cladoceans.</p>
+<div class="cell page-columns page-full">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>grid_theme <span class="ot">&lt;-</span> <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">'none'</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_grid</span>(plot_list[[<span class="dv">1</span>]]<span class="sc">+</span>grid_theme<span class="sc">+</span><span class="fu">labs</span>(<span class="at">subtitle =</span> <span class="st">'All-living'</span>),</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>          plot_list[[<span class="dv">2</span>]]<span class="sc">+</span>grid_theme<span class="sc">+</span><span class="fu">labs</span>(<span class="at">subtitle =</span> <span class="st">'Chaetognath'</span>),</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>          plot_list[[<span class="dv">3</span>]]<span class="sc">+</span>grid_theme<span class="sc">+</span><span class="fu">labs</span>(<span class="at">subtitle =</span> <span class="st">'Annelid'</span>),</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>          plot_list[[<span class="dv">4</span>]]<span class="sc">+</span>grid_theme<span class="sc">+</span><span class="fu">labs</span>(<span class="at">subtitle =</span> <span class="st">'Copepod'</span>),</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>          plot_list[[<span class="dv">5</span>]]<span class="sc">+</span>grid_theme<span class="sc">+</span><span class="fu">labs</span>(<span class="at">subtitle =</span> <span class="st">'Shrimp-like'</span>),</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>          plot_list[[<span class="dv">6</span>]]<span class="sc">+</span><span class="fu">labs</span>(<span class="at">subtitle =</span> <span class="st">'Ostra/Clado'</span>),</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>          <span class="at">align =</span> <span class="st">'vh'</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>          <span class="at">ncol =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display column-body-outset">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="main_analysis_01_files/figure-html/Figure%201-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Size distributions for select taxa. MOCNESS individuals below 0.934mm were excluded</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+<p>Notably, there is a large size overlap for many of the taxa. However, there is a portion of large Copepods, Chaetognaths, and Shrimp-like crustaceans sampled by the MOCNESS which are seemingly undersampled by the UVP. This is possibly due to avoidance of the UVP by these large, mobile organisms. The UVP samples a slightly larger range of annlids. However this observation is likely due to polychaetes getting broken into smaller fragments in the MOCNESS, and thus not representative of their <em>in situ</em> size. Additionally, the UVP samples a larger size range of Ostracods/Cladocerans. However, this may be an artefact of the inability to identify smaller cladocerans in UVP images.</p>
+<hr>
+<div class="cell page-columns page-full">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>comp_taxo <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'Chaetognatha'</span>, <span class="st">'Annelida'</span>, <span class="st">'Copepoda'</span>, <span class="st">'Shrimp-like'</span>,</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>               <span class="st">'Ostra/Clado'</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Format the data for the table</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>summary_df <span class="ot">&lt;-</span> <span class="cf">function</span>(df, sum_col, sum_by) {</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  rdf <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">taxa =</span> <span class="fu">sort</span>(<span class="fu">unique</span>(df[[sum_by]])),</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>                      <span class="at">min =</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="fu">length</span>(<span class="fu">unique</span>(df[[sum_by]]))),</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>                      <span class="at">median =</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="fu">length</span>(<span class="fu">unique</span>(df[[sum_by]]))),</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>                      <span class="at">mean =</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="fu">length</span>(<span class="fu">unique</span>(df[[sum_by]]))),</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>                      <span class="at">max =</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="fu">length</span>(<span class="fu">unique</span>(df[[sum_by]]))))</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  rdf<span class="sc">$</span>min <span class="ot">&lt;-</span>  <span class="fu">aggregate</span>(df[[sum_col]], <span class="at">by =</span> <span class="fu">list</span>(<span class="at">taxa =</span> df[[sum_by]]),</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>                      <span class="at">FUN =</span> min)<span class="sc">$</span>x</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  rdf<span class="sc">$</span>median <span class="ot">&lt;-</span> <span class="fu">aggregate</span>(df[[sum_col]], <span class="at">by =</span> <span class="fu">list</span>(<span class="at">taxa =</span> df[[sum_by]]),</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>                      <span class="at">FUN =</span> median)<span class="sc">$</span>x</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  rdf<span class="sc">$</span>mean <span class="ot">&lt;-</span> <span class="fu">aggregate</span>(df[[sum_col]], <span class="at">by =</span> <span class="fu">list</span>(<span class="at">taxa =</span> df[[sum_by]]),</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>                      <span class="at">FUN =</span> mean)<span class="sc">$</span>x</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  rdf<span class="sc">$</span>max <span class="ot">&lt;-</span> <span class="fu">aggregate</span>(df[[sum_col]], <span class="at">by =</span> <span class="fu">list</span>(<span class="at">taxa =</span> df[[sum_by]]),</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>                      <span class="at">FUN =</span> max)<span class="sc">$</span>x</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  all_sum <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">taxa =</span> <span class="st">'All-Living'</span>)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  all_sum<span class="sc">$</span>min <span class="ot">&lt;-</span> <span class="fu">min</span>(df[[sum_col]])</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  all_sum<span class="sc">$</span>median <span class="ot">&lt;-</span> <span class="fu">median</span>(df[[sum_col]])</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  all_sum<span class="sc">$</span>mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(df[[sum_col]])</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  all_sum<span class="sc">$</span>max <span class="ot">&lt;-</span> <span class="fu">max</span>(df[[sum_col]])</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  rdf <span class="ot">&lt;-</span> <span class="fu">rbind</span>(all_sum, rdf)</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(rdf)</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>moc_dat <span class="ot">&lt;-</span> <span class="fu">summary_df</span>(dat_list<span class="sc">$</span>moc_trim, <span class="st">'calc_esd'</span>, <span class="st">'taxo_name'</span>)</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>uvp_dat <span class="ot">&lt;-</span> <span class="fu">summary_df</span>(dat_list<span class="sc">$</span>uvp, <span class="st">'calc_esd'</span>, <span class="st">'name'</span>)</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a><span class="fu">datatable</span>(moc_dat, <span class="at">class =</span> <span class="st">'hover'</span>, <span class="at">caption =</span> <span class="st">'Size summary statistics for MOCNESS-collected plankton above 0.934mm. Units are mm.'</span>,</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>          <span class="at">rownames =</span> F)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display column-screen-inset">
+<div id="htmlwidget-360cda562ed51f88e046" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-360cda562ed51f88e046">{"x":{"filter":"none","vertical":false,"caption":"<caption>Size summary statistics for MOCNESS-collected plankton above 0.934mm. Units are mm.<\/caption>","data":[["All-Living","Actinopterygii","Amphipoda","Annelida","Cephalochordata","Cephalopoda","Chaetognatha","Cirripedia","Copepoda","Gelatinous","Mollusca","Nauplii","Ostra/Clado","Other-living","Rhizaria","Shrimp-like"],[0.934093266118568,0.949699586938521,0.937055948769259,0.94118803698622,1.0466571084169,2.94209408727628,0.935929323450211,0.974439797088281,0.934093266118568,0.934935239979628,0.942327352301031,1.20121405888194,0.940579837868112,0.934629155427317,0.966294290614781,0.934916112630942],[1.87417868744762,3.0800204955627,2.08829663705387,1.58820121341584,2.0176239269838,4.20978587139771,2.20818880052856,1.52215002966366,1.51123423760654,1.763602405831,1.31149714071,1.20121405888194,1.0706667175006,2.52645232456711,1.01332212493429,2.56975384757765],[2.34737746363787,3.74784631568902,2.35477844904043,1.87361794537269,2.02551396292715,5.0368525252224,2.75767803101878,1.46753065906819,1.64794643368856,2.52472481517452,1.45751596953172,1.20121405888194,1.15758719066798,2.21353667408362,1.11185378957072,2.78666485391674],[26.265316188721,20.168122470816,15.0807053048178,8.34736649426399,2.53879481065982,10.1464835255963,12.5084837845665,1.95573109504065,5.95206103929139,26.265316188721,3.20416036047913,1.20121405888194,2.30170419089124,3.74151936229791,1.35594495316309,19.4759895720541]],"container":"<table class=\"hover\">\n  <thead>\n    <tr>\n      <th>taxa<\/th>\n      <th>min<\/th>\n      <th>median<\/th>\n      <th>mean<\/th>\n      <th>max<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div class="cell page-columns page-full">
+<div class="cell-output-display column-screen-inset">
+<div id="htmlwidget-95375c63f6c9c261a61a" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-95375c63f6c9c261a61a">{"x":{"filter":"none","vertical":false,"caption":"<caption>Size summary statistics for plankton imaged by the UVP<\/caption>","data":[["All-Living","Actinopterygii","Amphipoda","Annelida","Chaetognatha","Copepoda","Gelatinous","Mollusca","Ostra/Clado","Other-living","Rhizaria","Shrimp-like","Trichodesmium"],[0.934297950355083,4.02727361343761,5.7892603556625,0.973832406825826,1.02241862861742,0.951442462032058,1.70262508124535,1.00111590443733,0.97383240682583,0.995719013884306,0.957089054406258,0.934297950355083,0.951442462032058],[1.56061977704381,4.86150005866939,5.7892603556625,1.7215087465144,1.79184931750268,1.30900543221008,11.4347582009435,1.43621759622223,1.30690498048411,2.09554409231001,1.77087839731347,2.00626405600029,1.55369903439727],[2.12623598993299,6.41858010115362,5.7892603556625,1.80309920950546,1.9899854174085,1.47381315903746,20.0572033560652,1.47589748533586,1.39326930403896,2.2394575221085,2.19987299523177,2.6305715685823,1.64071735856775],[50.7051080069675,14.9437199912391,5.7892603556625,2.99975733819305,7.67849744421517,5.90445788400386,50.7051080069675,2.2814788760158,2.96179563751513,5.90263242163715,10.9356771361067,9.99607712182896,4.36993266833292]],"container":"<table class=\"hover\">\n  <thead>\n    <tr>\n      <th>taxa<\/th>\n      <th>min<\/th>\n      <th>median<\/th>\n      <th>mean<\/th>\n      <th>max<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+
+
+<!-- -->
+<div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title anchored" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb4" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> Comparison of Size Distributions Sampled by two devices</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="in">```{r importing data, warning=FALSE}</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(EcotaxaTools)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DT)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cowplot)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>dat_list <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">'../Output/data_01_size-range-dfs.rds'</span>)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>plot_list <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">'../Output/main_fig_01_matched-size-distribution.rds'</span>)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">'../Output/data_01_plotting-needs.rda'</span>)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>The MOCNESS and UVP inherently sample different size ranges. The MOCNESS was equipped with 153 micron mesh while the UVP only saves particles above 600 microns. To compare the effectiveness of the two devices, we analyzed MOCNESS images equal to or larger to what we are able to measure with the UVP. This comparison focuses only on taxa which made up a <span class="co">[</span><span class="ot">substantial</span><span class="co">](./main_analysis_02.html)</span> portion of taxa sampled by both instruments. It is important to note that although UVP is set to save particle images above 600 microns, for comparable sized taxa, larger sizes are needed to accurately distinguish plankton from particles. The smallest recorded comparable organism was a 934 micron Shrimp-like crustacean. As such, this was the minimum size for inclusion for any MOCNESS-collected plankton in subsequent analyses. The full MOCNESS size range extends to much <span class="co">[</span><span class="ot">smaller organisms</span><span class="co">](./supp_analysis_05.html)</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>Here we compare All taxa, Annelids, Chaetognaths, Copepods, Shrimp-like Crustaceans, and Ostracod/Cladoceans.</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="in">```{r Figure 1, fig.height=10, out.width='100%',fig.cap= 'Size distributions for select taxa. MOCNESS individuals below 0.934mm were excluded', dpi= 300, message = F, warning = F}</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="co">#| column: body-outset</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>grid_theme <span class="ot">&lt;-</span> <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">'none'</span>)</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_grid</span>(plot_list[[<span class="dv">1</span>]]<span class="sc">+</span>grid_theme<span class="sc">+</span><span class="fu">labs</span>(<span class="at">subtitle =</span> <span class="st">'All-living'</span>),</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>          plot_list[[<span class="dv">2</span>]]<span class="sc">+</span>grid_theme<span class="sc">+</span><span class="fu">labs</span>(<span class="at">subtitle =</span> <span class="st">'Chaetognath'</span>),</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>          plot_list[[<span class="dv">3</span>]]<span class="sc">+</span>grid_theme<span class="sc">+</span><span class="fu">labs</span>(<span class="at">subtitle =</span> <span class="st">'Annelid'</span>),</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>          plot_list[[<span class="dv">4</span>]]<span class="sc">+</span>grid_theme<span class="sc">+</span><span class="fu">labs</span>(<span class="at">subtitle =</span> <span class="st">'Copepod'</span>),</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>          plot_list[[<span class="dv">5</span>]]<span class="sc">+</span>grid_theme<span class="sc">+</span><span class="fu">labs</span>(<span class="at">subtitle =</span> <span class="st">'Shrimp-like'</span>),</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>          plot_list[[<span class="dv">6</span>]]<span class="sc">+</span><span class="fu">labs</span>(<span class="at">subtitle =</span> <span class="st">'Ostra/Clado'</span>),</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>          <span class="at">align =</span> <span class="st">'vh'</span>,</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>          <span class="at">ncol =</span> <span class="dv">1</span>)</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>Notably, there is a large size overlap for many of the taxa. However, there is a portion of large Copepods, Chaetognaths, and Shrimp-like crustaceans sampled by the MOCNESS which are seemingly undersampled by the UVP. This is possibly due to avoidance of the UVP by these large, mobile organisms. </span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>The UVP samples a slightly larger range of annlids. However this observation is likely due to polychaetes getting broken into smaller fragments in the MOCNESS, and thus not representative of their *in situ* size. Additionally, the UVP samples a larger size range of Ostracods/Cladocerans. However, this may be an artefact of the inability to identify smaller cladocerans in UVP images.</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a><span class="in">```{r Summary table}</span></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a><span class="co">#| column: screen-inset</span></span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>comp_taxo <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'Chaetognatha'</span>, <span class="st">'Annelida'</span>, <span class="st">'Copepoda'</span>, <span class="st">'Shrimp-like'</span>,</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>               <span class="st">'Ostra/Clado'</span>)</span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Format the data for the table</span></span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>summary_df <span class="ot">&lt;-</span> <span class="cf">function</span>(df, sum_col, sum_by) {</span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>  rdf <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">taxa =</span> <span class="fu">sort</span>(<span class="fu">unique</span>(df[[sum_by]])),</span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>                      <span class="at">min =</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="fu">length</span>(<span class="fu">unique</span>(df[[sum_by]]))),</span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>                      <span class="at">median =</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="fu">length</span>(<span class="fu">unique</span>(df[[sum_by]]))),</span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>                      <span class="at">mean =</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="fu">length</span>(<span class="fu">unique</span>(df[[sum_by]]))),</span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>                      <span class="at">max =</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="fu">length</span>(<span class="fu">unique</span>(df[[sum_by]]))))</span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>  rdf<span class="sc">$</span>min <span class="ot">&lt;-</span>  <span class="fu">aggregate</span>(df[[sum_col]], <span class="at">by =</span> <span class="fu">list</span>(<span class="at">taxa =</span> df[[sum_by]]),</span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>                      <span class="at">FUN =</span> min)<span class="sc">$</span>x</span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a>  rdf<span class="sc">$</span>median <span class="ot">&lt;-</span> <span class="fu">aggregate</span>(df[[sum_col]], <span class="at">by =</span> <span class="fu">list</span>(<span class="at">taxa =</span> df[[sum_by]]),</span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a>                      <span class="at">FUN =</span> median)<span class="sc">$</span>x</span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>  rdf<span class="sc">$</span>mean <span class="ot">&lt;-</span> <span class="fu">aggregate</span>(df[[sum_col]], <span class="at">by =</span> <span class="fu">list</span>(<span class="at">taxa =</span> df[[sum_by]]),</span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a>                      <span class="at">FUN =</span> mean)<span class="sc">$</span>x</span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a>  rdf<span class="sc">$</span>max <span class="ot">&lt;-</span> <span class="fu">aggregate</span>(df[[sum_col]], <span class="at">by =</span> <span class="fu">list</span>(<span class="at">taxa =</span> df[[sum_by]]),</span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a>                      <span class="at">FUN =</span> max)<span class="sc">$</span>x</span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a>  all_sum <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">taxa =</span> <span class="st">'All-Living'</span>)</span>
+<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a>  all_sum<span class="sc">$</span>min <span class="ot">&lt;-</span> <span class="fu">min</span>(df[[sum_col]])</span>
+<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a>  all_sum<span class="sc">$</span>median <span class="ot">&lt;-</span> <span class="fu">median</span>(df[[sum_col]])</span>
+<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a>  all_sum<span class="sc">$</span>mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(df[[sum_col]])</span>
+<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a>  all_sum<span class="sc">$</span>max <span class="ot">&lt;-</span> <span class="fu">max</span>(df[[sum_col]])</span>
+<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a>  rdf <span class="ot">&lt;-</span> <span class="fu">rbind</span>(all_sum, rdf)</span>
+<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(rdf)</span>
+<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a>moc_dat <span class="ot">&lt;-</span> <span class="fu">summary_df</span>(dat_list<span class="sc">$</span>moc_trim, <span class="st">'calc_esd'</span>, <span class="st">'taxo_name'</span>)</span>
+<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a>uvp_dat <span class="ot">&lt;-</span> <span class="fu">summary_df</span>(dat_list<span class="sc">$</span>uvp, <span class="st">'calc_esd'</span>, <span class="st">'name'</span>)</span>
+<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a><span class="fu">datatable</span>(moc_dat, <span class="at">class =</span> <span class="st">'hover'</span>, <span class="at">caption =</span> <span class="st">'Size summary statistics for MOCNESS-collected plankton above 0.934mm. Units are mm.'</span>,</span>
+<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a>          <span class="at">rownames =</span> F)</span>
+<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a><span class="in">```{r Second table, echo = FALSE}</span></span>
+<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a><span class="co">#| column: screen-inset</span></span>
+<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a><span class="fu">datatable</span>(uvp_dat, <span class="at">class =</span> <span class="st">'hover'</span>, <span class="at">caption =</span> <span class="st">'Size summary statistics for plankton imaged by the UVP'</span>,</span>
+<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a>          <span class="at">rownames =</span> F)</span>
+<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</main> <!-- /main -->
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+    } else {
+      disableStylesheet(alternateStylesheets);
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    setTimeout(function() {
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+</body></html>
