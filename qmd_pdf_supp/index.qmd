@@ -1,4 +1,4 @@
-# Supplemental Figures {.unnumbered}
+# Supplemental Figures
 
 This pdf holds all the supplemental figures for "Comparison of an in-situ imaging device and net-based method to study mesozooplankton communities in an oligotrophic system."
 
