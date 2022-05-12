@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
   <meta charset="utf-8">
-  <meta name="generator" content="quarto-0.9.194">
+  <meta name="generator" content="quarto-0.9.80">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <title>Oligotrophic Mesozooplankton Methods Comparison - Oligotrophic Comparison of Net-Based &amp; In-situ Items</title>
   <style>
@@ -89,8 +89,8 @@
   <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
   <script src="site_libs/quarto-html/anchor.min.js"></script>
   <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-  <link class="quarto-color-scheme" id="quarto-text-highlighting-styles" href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
-  <link class="quarto-color-scheme quarto-color-alternate" rel="prefetch" id="quarto-text-highlighting-styles" href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css">
+  <link class="quarto-color-scheme" href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+  <link class="quarto-color-scheme quarto-color-alternate" rel="prefetch" href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css">
   <script src="site_libs/bootstrap/bootstrap.min.js"></script>
   <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
   <link class="quarto-color-scheme" href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
@@ -98,7 +98,7 @@
   <script id="quarto-search-options" type="application/json">{
     "location": "navbar",
     "copy-button": false,
-    "collapse-after": 3,
+    "collapse-after": 2,
     "panel-placement": "end",
     "type": "overlay",
     "limit": 20,
@@ -227,8 +227,8 @@
 <!-- main -->
 <main class="content" id="quarto-document-content">
 <header id="title-block-header" class="quarto-title-block default">
-
-<div class="quarto-title"><div class="quarto-title-block"><div><h1 class="title">Oligotrophic Comparison of Net-Based &amp; In-situ Items</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div></div></header>
+<div class="quarto-title-block"><div><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title"><h1 class="title">Oligotrophic Comparison of Net-Based &amp; In-situ Items</h1></div></header>
 <p>Supplemental information for “Comparison of an in-situ imaging device and net-based method to study mesozooplankton communities in an oligotrophic system.”</p>
 <p>This study analyzed abundance and biomass estimates collected through two methods: A traditional depth-specific net system (MOCNESS) and a novel <em>in-situ</em> imaging tool, the UVP.</p>
 <p>Here, you can look at our main analyses as well as supplemental information and figures. Data are available on the <a href="https://github.com/TheAlexBarth/Oligotrophic_in%20situ_net_comparison">project’s github repo</a> along with r scripts for processing the data. Much of the data analysis relies on Alex Barth’s <a href="https://github.com/TheAlexBarth/EcotaxaTools">EcotaxaTools Package</a> which is currently not yet available on CRAN. Additionally, all data on the repo are in .rds format to allow for storage of complex objects. If you would like data for this project in either csv or json format, send an email to Alex Barth (AB93@email.sc.edu).</p>
@@ -258,9 +258,39 @@
 </ul>
 
 
-
 <!-- -->
-
+<div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title anchored" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Oligotrophic Comparison of Net-Based &amp; In-situ Items"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>Supplemental information for "Comparison of an in-situ imaging device and net-based method to study mesozooplankton communities in an oligotrophic system."</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>This study analyzed abundance and biomass estimates collected through two methods: A traditional depth-specific net system (MOCNESS) and a novel *in-situ* imaging tool, the UVP.</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Here, you can look at our main analyses as well as supplemental information and figures. Data are available on the <span class="co">[</span><span class="ot">project's github repo</span><span class="co">](https://github.com/TheAlexBarth/Oligotrophic_in%20situ_net_comparison)</span> along with r scripts for processing the data. Much of the data analysis relies on Alex Barth's <span class="co">[</span><span class="ot">EcotaxaTools Package</span><span class="co">](https://github.com/TheAlexBarth/EcotaxaTools)</span> which is currently not yet available on CRAN. Additionally, all data on the repo are in .rds format to allow for storage of complex objects. If you would like data for this project in either csv or json format, send an email to Alex Barth (AB93\@email.sc.edu).</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">### Main Analyses:</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">1: Size sampling distributions by different tools</span><span class="co">](./main_analysis_01.html)</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">2: Comparison of proportional representation of taxa by different sampling mechanisms</span><span class="co">](./main_analysis_02.html)</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">3: Density profiles of select taxa estimated by the two different tools</span><span class="co">](./main_analysis_03.html)</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">4: Regression between bin-matched UVP and MOCNESS density estimates</span><span class="co">](./main_analysis_04.html)</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">5: Depth Integrated Abundance</span><span class="co">](./main_analysis_05.html)</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">6: Biomass profiles estimated by the two different tools</span><span class="co">](./main_analysis_06)</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">7: Regression between bin-matched UVP and MOCNESS biomass estimates</span><span class="co">](./main_analysis_07.html)</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">8: Depth Integrated Biomass</span><span class="co">](./main_analysis_08.html)</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="fu">### Supplemental Analyses &amp; Figures</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Supplemental Figure 1 - Descent Rate &amp; Volume Sampled</span><span class="co">](./supp_analysis_01.html)</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Supplemental Figure 2 - An example of a multiple-imaged individual</span><span class="co">](./supp_analysis_02.html)</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Supplemental Figure 3 - Impact of multiple-imaged individuals on density estimates</span><span class="co">](./supp_analysis_03.html)</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Supplemental Figure 4 - Bin-Size Investigation</span><span class="co">](./supp_analysis_04.html)</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Supplemental Figure 5 - Full Size Range MOCNESS Compared to UVP</span><span class="co">](./supp_analysis_05.html)</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Supplemental Figure 6 - All Density Profiles</span><span class="co">](./supp_analysis_06.html)</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Supplemental Figure 7 - All Biomass Profiles</span><span class="co">](./supp_analysis_07.html)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
 </section>
 </main> <!-- /main -->
 <script type="application/javascript">
@@ -486,38 +516,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 });
-</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Oligotrophic Comparison of Net-Based &amp; In-situ Items"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>Supplemental information for "Comparison of an in-situ imaging device and net-based method to study mesozooplankton communities in an oligotrophic system."</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>This study analyzed abundance and biomass estimates collected through two methods: A traditional depth-specific net system (MOCNESS) and a novel *in-situ* imaging tool, the UVP.</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Here, you can look at our main analyses as well as supplemental information and figures. Data are available on the <span class="co">[</span><span class="ot">project's github repo</span><span class="co">](https://github.com/TheAlexBarth/Oligotrophic_in%20situ_net_comparison)</span> along with r scripts for processing the data. Much of the data analysis relies on Alex Barth's <span class="co">[</span><span class="ot">EcotaxaTools Package</span><span class="co">](https://github.com/TheAlexBarth/EcotaxaTools)</span> which is currently not yet available on CRAN. Additionally, all data on the repo are in .rds format to allow for storage of complex objects. If you would like data for this project in either csv or json format, send an email to Alex Barth (AB93\@email.sc.edu).</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">### Main Analyses:</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">1: Size sampling distributions by different tools</span><span class="co">](./main_analysis_01.html)</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">2: Comparison of proportional representation of taxa by different sampling mechanisms</span><span class="co">](./main_analysis_02.html)</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">3: Density profiles of select taxa estimated by the two different tools</span><span class="co">](./main_analysis_03.html)</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">4: Regression between bin-matched UVP and MOCNESS density estimates</span><span class="co">](./main_analysis_04.html)</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">5: Depth Integrated Abundance</span><span class="co">](./main_analysis_05.html)</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">6: Biomass profiles estimated by the two different tools</span><span class="co">](./main_analysis_06)</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">7: Regression between bin-matched UVP and MOCNESS biomass estimates</span><span class="co">](./main_analysis_07.html)</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">8: Depth Integrated Biomass</span><span class="co">](./main_analysis_08.html)</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="fu">### Supplemental Analyses &amp; Figures</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Supplemental Figure 1 - Descent Rate &amp; Volume Sampled</span><span class="co">](./supp_analysis_01.html)</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Supplemental Figure 2 - An example of a multiple-imaged individual</span><span class="co">](./supp_analysis_02.html)</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Supplemental Figure 3 - Impact of multiple-imaged individuals on density estimates</span><span class="co">](./supp_analysis_03.html)</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Supplemental Figure 4 - Bin-Size Investigation</span><span class="co">](./supp_analysis_04.html)</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Supplemental Figure 5 - Full Size Range MOCNESS Compared to UVP</span><span class="co">](./supp_analysis_05.html)</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Supplemental Figure 6 - All Density Profiles</span><span class="co">](./supp_analysis_06.html)</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Supplemental Figure 7 - All Biomass Profiles</span><span class="co">](./supp_analysis_07.html)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div></div></div></div></div>
+</script>
 </div> <!-- /content -->
 
 
