@@ -1,5 +1,7 @@
 This is the data, code, and supplemental figures associated with the paper: Comparison of an in-situ imaging device and net-based method to study mesozooplankton communities in an oligotrophic system.
 
+Access the static site for this project at this [link](https://thealexbarth.github.io/Oligotrophic_in-situ_net_comparison)
+
 In this project, there are several directories which serve different purposes:
 
 ## R
